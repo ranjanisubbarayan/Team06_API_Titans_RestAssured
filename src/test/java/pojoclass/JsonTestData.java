@@ -1,6 +1,9 @@
 package pojoclass;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class JsonTestData {
 
@@ -19,9 +22,15 @@ public class JsonTestData {
     @JsonProperty("loginRequest")
     private Login loginRequest;
     
+    @JsonProperty("programRequest")
+    private ProgramRequest programRequest;
+    
     private String expectedType;
     private String expectedEmail;
     private String expectedStatus;
+    
+    @JsonProperty("expectedStatusCode")
+    private Integer expectedStatusCode;
   
     public String getTestcaseName() {
         return testcaseName;
@@ -74,6 +83,13 @@ public class JsonTestData {
 
     public String getExpectedStatus() {
         return expectedStatus;
+    }
+    
+    public ProgramRequest getProgramRequest() {
+        return programRequest;
+}
+    public Integer getExpectedStatusCode() {
+        return expectedStatusCode;
     }
     
 }
