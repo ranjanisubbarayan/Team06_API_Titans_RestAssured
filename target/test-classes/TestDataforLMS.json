@@ -1,0 +1,41 @@
+{
+  "PostRequest": [
+    {
+      "testcaseName": "Login API",
+      "endpoint": "/login",
+      "contentType": "application/json",
+      "loginRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": "TeamSix@123"
+      },
+	  "expectedType": "Bearer",
+	  "expectedEmail": "Team06@gmail.com",
+	  "expectedStatus": "ACTIVE"
+    }
+	
+	{
+	     "testcaseName": "Create Program",
+	     "endpoint": "/saveprogram",
+	     "programRequest": {
+	       "programName": "Team06pgm",
+	       "programDescription": "Auto generated program",
+	       "programStatus": "Active"
+	     },
+	     "expectedStatus": "Active"
+	   }
+  ],
+  
+  "GetRequest": [
+    {
+      "testcaseName": "Get All Programs",
+      "endpoint": "/allPrograms",
+      "expectedStatusCode": 200
+    },
+    {
+      "testcaseName": "Get All Programs With Users",
+      "endpoint": "/allProgramsWithUsers",
+      "expectedStatusCode": 200
+    }
+  ]
+
+}
