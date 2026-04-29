@@ -8,19 +8,33 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class JsonTestData {
 
     @JsonProperty("testcaseName")
-    private String testcaseName;
+    public String testcaseName;
 
     @JsonProperty("endpoint")
-    private String endpoint;
+    public String endpoint;
 
     @JsonProperty("Statusmessage") 
-    private String statusmessage;
+    public String statusmessage;
 
     @JsonProperty("contentType")
-    private String contentType;
+    public String contentType;
     
     @JsonProperty("loginRequest")
-    private Login loginRequest;
+    public Login loginRequest;
+    
+    @JsonProperty("BatchData")
+    public Data data;
+    
+    public Data getData() {
+    	return data;
+    }
+    public void setData(Data data) {
+        this.data = data;
+    }
+    
+    public String expectedType;
+    public String expectedEmail;
+    public String expectedStatus;
     
     @JsonProperty("programRequest")
     private ProgramRequest programRequest;
