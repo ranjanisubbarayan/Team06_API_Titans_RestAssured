@@ -1,0 +1,16 @@
+{
+  "PostRequest": [
+    {
+      "testcaseName": "Login API",
+      "endpoint": "/login",
+      "contentType": "application/json",
+      "loginRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": "TeamSix@123"
+      },
+	  "expectedType": "Bearer",
+	  "expectedEmail": "Team06@gmail.com",
+	  "expectedStatus": "ACTIVE"
+    }
+  ]
+}
