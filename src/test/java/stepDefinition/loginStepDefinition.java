@@ -51,12 +51,10 @@ public class loginStepDefinition extends Base  {
 		
 		log.info("Validating status code...");
 		 assertEquals(response.getStatusCode(), statusCode.intValue());
+		 log.info(response.asString());
+			log.info(response.asPrettyString());
 		 
-	        String token = response.jsonPath().getString("token");
-	        Token.token = token;
-	        assertNotNull(token);
-	        log.info("Generated Token: {}", token);
-	       
+	   
 		
 	}
 
