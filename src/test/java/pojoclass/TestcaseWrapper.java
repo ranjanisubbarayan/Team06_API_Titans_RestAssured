@@ -10,7 +10,11 @@ public class TestcaseWrapper {
 
     @JsonProperty("GetRequest")
     private List<JsonTestData> getRequest;
+    
+    @JsonProperty("DeleteRequest")
+    private List<JsonTestData> deleteRequest;
 
+ 
     public List<JsonTestData> getPostRequest() {
         return postRequest;
     }
@@ -25,5 +29,13 @@ public class TestcaseWrapper {
 
     public void setGetRequest(List<JsonTestData> getRequest) {
         this.getRequest = getRequest;
+    }
+    
+    public List<JsonTestData> getDeleteRequest() {
+        return deleteRequest;
+    }
+
+    public void setDeleteRequest(List<JsonTestData> deleteRequest) {
+        this.deleteRequest = deleteRequest;
     }
 }
