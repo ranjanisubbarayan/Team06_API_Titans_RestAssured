@@ -8,33 +8,84 @@
         "userLoginEmailId": "Team06@gmail.com",
         "password": "TeamSix@123"
       },
-	  "expectedType": "Bearer",
-	  "expectedEmail": "Team06@gmail.com",
-	  "expectedStatus": "ACTIVE"
+      "expectedType": "Bearer",
+      "expectedEmail": "Team06@gmail.com",
+      "expectedStatus": "ACTIVE",
+      "expectedStatusCode": 200
     },
-	
-	{
-	     "testcaseName": "Create Program",
-	     "endpoint": "/saveprogram",
-	     "programRequest": {
-	       "programName": "Teamsix",
-	       "programDescription": "Auto generated program",
-	       "programStatus": "Active"
-	     },
-	     "expectedStatus": "Active"
-	   }
+    {
+      "testcaseName": "Login with empty password",
+      "endpoint": "/login",
+      "contentType": "application/json",
+      "loginRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": ""
+      },
+      "expectedStatusCode": 400
+    },
+    {
+      "testcaseName": "Login with empty email",
+      "endpoint": "/login",
+      "contentType": "application/json",
+      "loginRequest": {
+        "userLoginEmailId": "",
+        "password": "TeamSix@123"
+      },
+      "expectedStatusCode": 400
+    },
+    {
+      "testcaseName": "Login without request body",
+      "endpoint": "/login",
+      "contentType": "application/json",
+      "expectedStatusCode": 400
+    },
+    {
+      "testcaseName": "Login with invalid content type",
+      "endpoint": "/login",
+      "contentType": "text/plain",
+       "rawBody": "{\"userLoginEmailId\":\"Team06@gmail.com\",\"password\":\"TeamSix@123\"}",
+      "expectedStatusCode": 415
+    },
+    {
+      "testcaseName": "Login with invalid endpoint",
+      "endpoint": "/loginnnn",
+      "contentType": "application/json",
+      "loginRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": "TeamSix@123"
+      },
+      "expectedStatusCode": 404
+    },
+    {
+      "testcaseName": "Create Program",
+      "endpoint": "/saveprogram",
+      "programRequest": {
+        "programName": "Teamsix",
+        "programDescription": "Auto generated program",
+        "programStatus": "Active"
+      },
+      "expectedStatus": "Active",
+      "expectedStatusCode": 201
+    }
   ],
-  
   "GetRequest": [
     {
       "testcaseName": "Get All Programs",
-      "endpoint": "/allPrograms"
+      "endpoint": "/allPrograms",
+      "expectedStatusCode": 200
     },
     {
       "testcaseName": "Get All Programs With Users",
-      "endpoint": "/allProgramsWithUsers"
-    
+      "endpoint": "/allProgramsWithUsers",
+      "expectedStatusCode": 200
     }
-  ]
-
+	],
+    "DeleteRequest": [
+	  {
+	    "testcaseName": "DeleteProgram ByID",
+	    "endpoint": "/deletebyprogid/3109",
+	    "expectedStatusCode": 404,
+	    "expectedMessage": "deleted"
+	  }
+]
 }

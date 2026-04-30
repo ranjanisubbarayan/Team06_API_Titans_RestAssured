@@ -3,7 +3,7 @@ package pojoclass;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class JsonTestData {
 
@@ -25,12 +25,27 @@ public class JsonTestData {
     @JsonProperty("programRequest")
     private ProgramRequest programRequest;
     
+    @JsonProperty("expectedType")
     private String expectedType;
+    
+    @JsonProperty("expectedEmail")
     private String expectedEmail;
+    
+    @JsonProperty("expectedStatus")
     private String expectedStatus;
+    
+    @JsonProperty("rawBody")
+    private String rawBody;
     
     @JsonProperty("expectedStatusCode")
     private Integer expectedStatusCode;
+    
+    @JsonProperty("programId")
+    private Integer programId;
+
+    @JsonProperty("expectedMessage")
+    private String expectedMessage;
+
   
     public String getTestcaseName() {
         return testcaseName;
@@ -85,11 +100,28 @@ public class JsonTestData {
         return expectedStatus;
     }
     
+    
     public ProgramRequest getProgramRequest() {
         return programRequest;
 }
     public Integer getExpectedStatusCode() {
         return expectedStatusCode;
+    }
+    
+    public String getRawBody() {
+        return rawBody;
+    }
+
+    public void setRawBody(String rawBody) {
+        this.rawBody = rawBody;
+    }
+    
+    public Integer getProgramId() {
+        return programId;
+    }
+
+    public String getExpectedMessage() {
+        return expectedMessage;
     }
     
 }
