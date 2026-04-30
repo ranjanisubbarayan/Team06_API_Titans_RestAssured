@@ -68,7 +68,7 @@ public class ProgramStepDefinition extends Base {
     @Then("Admin receives Status with response body in GET program API")
     public void admin_receives_status_with_response_body_in_get_program_api() {
         
-        assertEquals(response.getStatusCode(), testData.getExpectedStatusCode());
+        assertEquals(response.getStatusCode(), testData.getExpectedStatus());
         log.info("admin received the response body with the Status Code: {}", response.getStatusCode());
     	log.info("Response Body:\n{}", response.asPrettyString());
     }	
@@ -191,7 +191,7 @@ public void admin_sends_a_https_delete_request_to_the_valid_endpoint_in_program_
 @Then("Admin receives Status with response body in DELETE program API")
 public void admin_receives_status_with_response_body_in_delete_program_api() {
 	
-	assertEquals(response.getStatusCode(), testData.getExpectedStatusCode());
+	assertEquals(response.getStatusCode(), testData.getExpectedStatus());
      log.info("admin received the response body with the Status Code: {}", response.getStatusCode());
  	log.info("Response Body:\n{}", response.asPrettyString());
  

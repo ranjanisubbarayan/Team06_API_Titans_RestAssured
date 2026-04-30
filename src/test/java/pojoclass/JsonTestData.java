@@ -31,9 +31,9 @@ public class JsonTestData {
 //        this.data = data;
 //    }
     
-    public String expectedType;
-    public String expectedEmail;
-    public String expectedStatus;
+//    public String expectedType;
+//    public String expectedEmail;
+//    public String expectedStatus;
     
     @JsonProperty("programRequest")
     private ProgramRequest programRequest;

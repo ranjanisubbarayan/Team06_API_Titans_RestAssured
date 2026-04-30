@@ -89,11 +89,11 @@
       "contentType": "application/json",
       "BatchData": {
         "batchDescription": "Automation Batch",
-        "batchName": "SanityTesting_01",
+        "batchName": "Teamsix-XXklJ_01",
         "batchNoOfClasses": 2,
         "batchStatus": "Active",
-        "programId": 3070,
-        "programName": "SanityTesting"
+        "programId": 3151,
+        "programName": "Teamsix-XXklJ"
       }
     }
   ],
