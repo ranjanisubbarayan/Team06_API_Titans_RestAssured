@@ -1,27 +1,82 @@
 package stepDefinition;
 
+import static org.testng.Assert.assertEquals;
+
+import java.io.IOException;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import pojoclass.BatchDataPojo;
+import pojoclass.JsonTestData;
+import pojoclass.TestcaseWrapper;
+import utilities.Base;
+import utilities.JsonReader;
+import utilities.RandomLetters;
+import utilities.ScenarioContext;
 
-public class BatchStepDefiniton {
+public class BatchStepDefiniton extends Base {
 	
+	RequestSpecification request;
+    Response response;
+    BatchDataPojo batchData;
+
+    ScenarioContext context = new ScenarioContext();
+
+    JsonTestData testData;
+    private static final Logger log = LoggerFactory.getLogger(BatchStepDefiniton.class);
+
+    @Given("Admin sets Authorization to Bearer Token for batch")
+    public void admin_sets_authorization_to_bearer_token_for_batch() throws IOException {
+    	request = createTokenRequest();
+    }
+
 	@Given("Admin creates POST request with mandatory and optional fields")
-	public void admin_creates_post_request_with_mandatory_and_optional_fields() {
+	public void admin_creates_post_request_with_mandatory_and_optional_fields() throws IOException {
+		TestcaseWrapper wrapper = getTestData(); 
+//		TestcaseWrapper wrapper =
+//		        JsonReader.readAllModules("TestDataforLMS.json");
+		testData = JsonReader.getTestDataByScenarioName(
+	            "create batch with all fields",
+	            wrapper.getTests()
+	    );
+		batchData = testData.getBatchData();
+		System.out.println(batchData.getBatchName());
+		System.out.println(batchData.getProgramId());
+		int programId = ScenarioContext.get("programId", Integer.class);
+	    String programName = ScenarioContext.get("programName", String.class);
 	    
+	    batchData.setProgramId(programId);
+	    batchData.setProgramName(programName);
+	    String randomSuffix = RandomLetters.randomLetters(10);
+		batchData.setBatchName(programName + "_" + randomSuffix);
+		request.contentType(testData.getContentType())
+		.body(batchData);
+//		
 	    
 	}
 
 	@When("Admin sends HTTPS request to the endpoint")
 	public void admin_sends_https_request_to_the_endpoint() {
-	    
-	    
+		
+		response = request
+                .when()
+                .post(testData.getEndpoint());
+//		System.out.println(response.getBody().asPrettyString());
 	}
 
 	@Then("Admin receives {int} Created status with response body.")
-	public void admin_receives_created_status_with_response_body(Integer int1) {
+	public void admin_receives_created_status_with_response_body(Integer statusCode) {
 	    
-	    
+		log.info(response.asString());
+    	assertEquals(response.getStatusCode(), statusCode.intValue());
+
 	}
 
 	@Given("Admin creates a POST request with program name that does not match the associated program id")
@@ -180,8 +235,8 @@ public class BatchStepDefiniton {
 	    
 	}
 
-	@When("Admin sends a HTTPS request to the valid endpoint")
-	public void admin_sends_a_https_request_to_the_valid_endpoint() {
+	@When("Admin sends a HTTPS request to the valid endpoint for batch")
+	public void admin_sends_a_https_request_to_the_valid_endpoint_for_batch() {
 	    
 	    
 	}

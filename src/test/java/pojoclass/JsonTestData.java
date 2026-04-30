@@ -1,9 +1,8 @@
 package pojoclass;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+//import pojoclass.TestcaseWrapper.BatchData;
 
 public class JsonTestData {
 
@@ -22,15 +21,15 @@ public class JsonTestData {
     @JsonProperty("loginRequest")
     public Login loginRequest;
     
-    @JsonProperty("BatchData")
-    public Data data;
-    
-    public Data getData() {
-    	return data;
-    }
-    public void setData(Data data) {
-        this.data = data;
-    }
+//    @JsonProperty("BatchData")
+//    public Data data;
+//    
+//    public Data getData() {
+//    	return data;
+//    }
+//    public void setData(Data data) {
+//        this.data = data;
+//    }
     
     public String expectedType;
     public String expectedEmail;
@@ -39,12 +38,8 @@ public class JsonTestData {
     @JsonProperty("programRequest")
     private ProgramRequest programRequest;
     
-    private String expectedType;
-    private String expectedEmail;
-    private String expectedStatus;
-    
-    @JsonProperty("expectedStatusCode")
-    private Integer expectedStatusCode;
+    @JsonProperty("BatchData")
+    private BatchDataPojo batchData ;
   
     public String getTestcaseName() {
         return testcaseName;
@@ -98,12 +93,10 @@ public class JsonTestData {
     public String getExpectedStatus() {
         return expectedStatus;
     }
-    
     public ProgramRequest getProgramRequest() {
         return programRequest;
-}
-    public Integer getExpectedStatusCode() {
-        return expectedStatusCode;
     }
-    
+    public BatchDataPojo getBatchData() {
+        return batchData;
+    }
 }

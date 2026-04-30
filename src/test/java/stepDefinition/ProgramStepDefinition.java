@@ -15,6 +15,7 @@ import pojoclass.ProgramResponse;
 import utilities.Base;
 import utilities.JsonReader;
 import utilities.RandomLetters;
+import utilities.ScenarioContext;
 import pojoclass.JsonTestData;
 import pojoclass.ProgramRequest;
 import pojoclass.TestcaseWrapper;
@@ -86,6 +87,12 @@ public class ProgramStepDefinition extends Base {
     	    programRequest.setProgramName(uniqueName);
     	    
     	    request.body(programRequest);
+    	    
+    	    Response response = request.post("/saveprogram");
+    	    int programId = response.jsonPath().getInt("programId");
+    	    String programName = response.jsonPath().getString("programName");
+    	    ScenarioContext.set("programId", programId);
+    	    ScenarioContext.set("programName", programName);
     }
 
     @When("Admin sends a HTTPS request to the valid endpoint")

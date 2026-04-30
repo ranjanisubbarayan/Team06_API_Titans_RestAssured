@@ -1,11 +1,15 @@
 package runner;
 
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-import io.cucumber.testng.CucumberOptions;
+import io.cucumber.junit.Cucumber;
+
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
 
 @CucumberOptions(
 		
-		features = "src/test/resources/feature/02-01-AddNewBatch.feature",
+		features = "src/test/resources/feature",
 		glue = "stepDefinition",
 		plugin = {"pretty", "html:target/cucumber-report.html",
 	    		//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
@@ -14,6 +18,6 @@ import io.cucumber.testng.CucumberOptions;
 		dryRun = true
 		
 		)
-public class TestRunner extends AbstractTestNGCucumberTests{
+public class TestRunner{
 
 }

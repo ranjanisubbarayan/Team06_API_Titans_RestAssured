@@ -35,6 +35,22 @@
       "endpoint": "/allProgramsWithUsers"
     
     }
-  ]
+  ],
 
+  "Tests": [
+  	{
+      "testcaseName": "create batch with all fields",
+      "expectedStatus": 201,
+      "endpoint": "/batches",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "Automation Batch",
+        "batchName": "SanityTesting_01",
+        "batchNoOfClasses": 2,
+        "batchStatus": "Active",
+        "programId": 3070,
+        "programName": "SanityTesting"
+      }
+    }
+  ]
 }
