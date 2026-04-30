@@ -16,8 +16,7 @@ public class Base {
 		
 		request = given()
 				  .header("Content-Type", "application/json")
-		          .baseUri(configReader.getProperty("BaseURL"));
-		        		
+		          .baseUri(configReader.getProperty("BaseURL"));	        		
 		return request;
 		
 		

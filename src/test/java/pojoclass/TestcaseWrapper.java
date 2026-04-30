@@ -14,14 +14,11 @@ public class TestcaseWrapper {
     
     @JsonProperty("Tests")
     private List<JsonTestData> tests;
-    
-//    @JsonProperty("BatchData")
-//    private List<JsonTestData> BatchData;
-    
-//    @JsonProperty("BatchData")
-//    public List<JsonTestData> batchData;
-    
    
+    @JsonProperty("DeleteRequest")
+    private List<JsonTestData> deleteRequest;
+
+ 
     public List<JsonTestData> getPostRequest() {
         return postRequest;
     }
@@ -40,22 +37,12 @@ public class TestcaseWrapper {
     
     public List<JsonTestData> getTests() { return tests; }
     public void setTests(List<JsonTestData> tests) { this.tests = tests; }
-    
-//    public void setTests(List<JsonTestData> tests) {
-//        this.tests = tests;
-//    }
-//    
-//    public List<JsonTestData> getTests() {
-//        return tests;
-//    }
-
-//    public List<JsonTestData> getBatchData() {
-//        return batchData;
-//    }
-//
-//    public void setBatchData(List<JsonTestData> batchData) {
-//        this.batchData = batchData;
-//    }
-    
   
+    public List<JsonTestData> getDeleteRequest() {
+        return deleteRequest;
+    }
+
+    public void setDeleteRequest(List<JsonTestData> deleteRequest) {
+        this.deleteRequest = deleteRequest;
+    }
 }

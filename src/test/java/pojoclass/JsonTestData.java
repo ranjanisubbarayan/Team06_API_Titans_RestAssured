@@ -2,7 +2,7 @@ package pojoclass;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-//import pojoclass.TestcaseWrapper.BatchData;
+//@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class JsonTestData {
 
@@ -40,6 +40,27 @@ public class JsonTestData {
     
     @JsonProperty("BatchData")
     private BatchDataPojo batchData ;
+    @JsonProperty("expectedType")
+    private String expectedType;
+    
+    @JsonProperty("expectedEmail")
+    private String expectedEmail;
+    
+    @JsonProperty("expectedStatus")
+    private String expectedStatus;
+    
+    @JsonProperty("rawBody")
+    private String rawBody;
+    
+    @JsonProperty("expectedStatusCode")
+    private Integer expectedStatusCode;
+    
+    @JsonProperty("programId")
+    private Integer programId;
+
+    @JsonProperty("expectedMessage")
+    private String expectedMessage;
+
   
     public String getTestcaseName() {
         return testcaseName;
@@ -93,10 +114,29 @@ public class JsonTestData {
     public String getExpectedStatus() {
         return expectedStatus;
     }
+    
+    
     public ProgramRequest getProgramRequest() {
         return programRequest;
     }
     public BatchDataPojo getBatchData() {
         return batchData;
     }
+    
+    public String getRawBody() {
+        return rawBody;
+    }
+
+    public void setRawBody(String rawBody) {
+        this.rawBody = rawBody;
+    }
+    
+    public Integer getProgramId() {
+        return programId;
+    }
+
+    public String getExpectedMessage() {
+        return expectedMessage;
+    }
+    
 }

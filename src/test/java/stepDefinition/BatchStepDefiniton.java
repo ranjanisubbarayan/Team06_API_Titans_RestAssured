@@ -47,8 +47,6 @@ public class BatchStepDefiniton extends Base {
 	            wrapper.getTests()
 	    );
 		batchData = testData.getBatchData();
-		System.out.println(batchData.getBatchName());
-		System.out.println(batchData.getProgramId());
 		int programId = ScenarioContext.get("programId", Integer.class);
 	    String programName = ScenarioContext.get("programName", String.class);
 	    
