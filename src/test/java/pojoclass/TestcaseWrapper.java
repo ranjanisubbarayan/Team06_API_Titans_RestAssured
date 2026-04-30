@@ -1,6 +1,7 @@
 package pojoclass;
 
 import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TestcaseWrapper {
@@ -11,6 +12,9 @@ public class TestcaseWrapper {
     @JsonProperty("GetRequest")
     private List<JsonTestData> getRequest;
     
+    @JsonProperty("Tests")
+    private List<JsonTestData> tests;
+   
     @JsonProperty("DeleteRequest")
     private List<JsonTestData> deleteRequest;
 
@@ -31,6 +35,9 @@ public class TestcaseWrapper {
         this.getRequest = getRequest;
     }
     
+    public List<JsonTestData> getTests() { return tests; }
+    public void setTests(List<JsonTestData> tests) { this.tests = tests; }
+  
     public List<JsonTestData> getDeleteRequest() {
         return deleteRequest;
     }

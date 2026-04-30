@@ -79,13 +79,30 @@
       "endpoint": "/allProgramsWithUsers",
       "expectedStatusCode": 200
     }
-	],
-    "DeleteRequest": [
+  ],
+
+  "Tests": [
+  	{
+      "testcaseName": "create batch with all fields",
+      "expectedStatus": 201,
+      "endpoint": "/batches",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "Automation Batch",
+        "batchName": "Teamsix-XXklJ_01",
+        "batchNoOfClasses": 2,
+        "batchStatus": "Active",
+        "programId": 3151,
+        "programName": "Teamsix-XXklJ"
+      }
+    }
+  ],
+  "DeleteRequest": [
 	  {
 	    "testcaseName": "DeleteProgram ByID",
 	    "endpoint": "/deletebyprogid/3109",
 	    "expectedStatusCode": 404,
 	    "expectedMessage": "deleted"
 	  }
-]
+  ]
 }
