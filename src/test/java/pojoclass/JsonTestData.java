@@ -1,36 +1,66 @@
 package pojoclass;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class JsonTestData {
 
     @JsonProperty("testcaseName")
-    private String testcaseName;
+    public String testcaseName;
 
     @JsonProperty("endpoint")
-    private String endpoint;
+    public String endpoint;
 
     @JsonProperty("Statusmessage") 
-    private String statusmessage;
+    public String statusmessage;
 
     @JsonProperty("contentType")
-    private String contentType;
+    public String contentType;
     
     @JsonProperty("loginRequest")
-    private Login loginRequest;
+    public Login loginRequest;
+    
+//    @JsonProperty("BatchData")
+//    public Data data;
+//    
+//    public Data getData() {
+//    	return data;
+//    }
+//    public void setData(Data data) {
+//        this.data = data;
+//    }
+    
+//    public String expectedType;
+//    public String expectedEmail;
+//    public String expectedStatus;
     
     @JsonProperty("programRequest")
     private ProgramRequest programRequest;
     
+    @JsonProperty("BatchData")
+    private BatchDataPojo batchData ;
+    @JsonProperty("expectedType")
     private String expectedType;
+    
+    @JsonProperty("expectedEmail")
     private String expectedEmail;
+    
+    @JsonProperty("expectedStatus")
     private String expectedStatus;
+    
+    @JsonProperty("rawBody")
+    private String rawBody;
     
     @JsonProperty("expectedStatusCode")
     private Integer expectedStatusCode;
+    
+    @JsonProperty("programId")
+    private Integer programId;
+
+    @JsonProperty("expectedMessage")
+    private String expectedMessage;
+
   
     public String getTestcaseName() {
         return testcaseName;
@@ -85,11 +115,28 @@ public class JsonTestData {
         return expectedStatus;
     }
     
+    
     public ProgramRequest getProgramRequest() {
         return programRequest;
-}
-    public Integer getExpectedStatusCode() {
-        return expectedStatusCode;
+    }
+    public BatchDataPojo getBatchData() {
+        return batchData;
+    }
+    
+    public String getRawBody() {
+        return rawBody;
+    }
+
+    public void setRawBody(String rawBody) {
+        this.rawBody = rawBody;
+    }
+    
+    public Integer getProgramId() {
+        return programId;
+    }
+
+    public String getExpectedMessage() {
+        return expectedMessage;
     }
     
 }
