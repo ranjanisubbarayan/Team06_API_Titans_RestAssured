@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		
-		features = "src/test/resources/feature",
+		features = "src/test/resources/feature/02-01-AddNewBatch.feature",
 		glue = "stepDefinition",
 		//tags = "@NegativeLoginAPI or @getallprogram",				
 		plugin = {"pretty", "html:target/cucumber-report.html",
