@@ -168,6 +168,102 @@ public class ProgramStepDefinition extends Base {
     	
     }
     
+    
+
+@Given("Admin creates PUT request with {string} for update program API")
+public void admin_creates_put_request_with_for_update_program_api(String scenarioName) {
+   
+	   TestcaseWrapper wrapper = getTestData();
+
+	    testData = JsonReader.getTestDataByScenarioName(
+	            scenarioName,
+	            wrapper.getPutRequest()
+	    );
+	    
+	    programRequest = testData.getProgramRequest();
+	    
+	    if (!"none".equalsIgnoreCase(testData.getbodyType())) {
+	    
+	    String randomSuffix = RandomLetters.randomLetters(5);
+
+	    String uniqueName = programRequest.getProgramName() + "-" + randomSuffix;
+	    
+	    if (uniqueName.length() > 25) {
+	        uniqueName = uniqueName.substring(0, 25);
+	    }
+
+	    programRequest.setProgramName(uniqueName);
+	    
+	    request.body(programRequest);
+	    }
+	    
+	    log.info("admin creates PUT request for the Update Program Module with the valida request body {}", scenarioName);
+}
+
+@When("Admin sends PUT request for {string} with valid endpoint for update program API")
+public void admin_sends_put_request_for_with_valid_endpoint_for_update_program_api(String scenarioName) {
+
+    Integer programId = ScenarioContext.get("programId", Integer.class);
+
+    String endpoint = testData.getEndpoint();
+    
+    if (endpoint.contains("{programId}")) 
+    {
+    	 endpoint = endpoint.replace("{programId}", String.valueOf(programId));
+    }
+    
+    
+    if (testData.getMethod().equalsIgnoreCase("POST")) {
+
+        response = request
+                .log().all()
+                .when()
+                .post(endpoint);
+     log.info("Update program with invalid method {} for the scenario {} ",testData.getMethod(), scenarioName);   
+        
+ }else {
+
+        response = request
+                .log().all()
+                .when()
+                .put(endpoint);
+        
+        log.info("update program with valid method {} for the scenario {}",testData.getMethod(),scenarioName); 
+ }
+    
+    
+    
+}
+
+@Then("Admin validates response for {string} for update program API")
+public void admin_validates_response_for_for_update_program_api(String scenarioName) {
+	 log.info("Response Body:\n{}", response.asPrettyString());	 
+	 
+	  assertEquals(response.getStatusCode(), testData.getexpectedStatusCode());
+	  
+	  log.info("Validatinf delete program request for {} with actual status code {}" , scenarioName ,testData.getexpectedStatusCode() );
+}
+
+
+@Then("Admin Validates response body matches JSON schema in  in Update program API")
+public void admin_validates_response_body_matches_json_schema_in_in_update_program_api() {
+	try {
+		if (response.getStatusCode() == 200) {
+
+		    response.then()
+		        .assertThat()
+		        .body(matchesJsonSchemaInClasspath("schema/addprogramSchema.json"));
+
+		    log.info("Schema validation Passed successfully for the Update progam response");
+		}
+	        
+	    } catch (AssertionError e) {
+
+	        log.error("Schema validation Failed for the Update progam response");
+	        throw e; 
+	    }
+}
+    
 
 @Given("Admin creates DELETE Request with valid program ID in endpoints in program API")
 public void admin_creates_delete_request_with_valid_program_id_in_endpoints_in_program_api() {

@@ -52,6 +52,9 @@ public class JsonTestData {
     @JsonProperty("rawBody")
     private String rawBody;
     
+    @JsonProperty("bodyType")
+    private String bodyType;
+    
     @JsonProperty("expectedStatusCode")
     private Integer expectedStatusCode;
     
@@ -140,6 +143,13 @@ public class JsonTestData {
         this.rawBody = rawBody;
     }
     
+    public String getbodyType() {
+        return bodyType;
+    }
+
+    public void setbodyType(String bodyType) {
+        this.bodyType = bodyType;
+    }
     public Integer getProgramId() {
         return programId;
     }
