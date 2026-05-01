@@ -21,6 +21,9 @@ public class JsonTestData {
     @JsonProperty("loginRequest")
     public Login loginRequest;
     
+    @JsonProperty("forgotPasswordRequest")
+    public ForgotPasswordRequest forgotPasswordRequest;
+    
     @JsonProperty("method")
     public String  method;
 //    
@@ -164,5 +167,13 @@ public class JsonTestData {
     
     public void setexpectedStatusCode(int expectedStatusCode) {
         this.expectedStatusCode = expectedStatusCode;
+    }
+    
+    public ForgotPasswordRequest getForgotPasswordRequest() {
+        return forgotPasswordRequest;
+    }
+
+    public void setForgotPasswordRequest(ForgotPasswordRequest forgotPasswordRequest) {
+        this.forgotPasswordRequest = forgotPasswordRequest;
     }
 }

@@ -56,6 +56,84 @@
       },
       "expectedStatusCode": 404
     },
+	{
+	    "testcaseName": "Valid Email in forgot password API",
+	    "method": "POST",
+	    "endpoint": "/login/forgotpassword/confirmEmail",
+	    "contentType": "application/json",
+	    "forgotPasswordRequest": {
+	      "userLoginEmailId": "Team06@gmail.com"
+	    },
+	    "expectedStatusCode": 201
+	  },
+	  {
+	    "testcaseName": "Invalid Content Type in forgot password API",
+	    "method": "POST",
+	    "endpoint": "/login/forgotpassword/confirmEmail",
+	    "contentType": "text/plain",
+	    "rawBody": "{\"userLoginEmailId\":\"Team06@gmail.com\"}",
+	    "expectedStatusCode": 415
+	  },
+	  {
+	    "testcaseName": "Invalid Method in forgot password API",
+	    "method": "GET",
+	    "endpoint": "/login/forgotpassword/confirmEmail",
+	    "contentType": "application/json",
+	    "forgotPasswordRequest": {
+	      "userLoginEmailId": "Team06@gmail.com"
+	    },
+	    "expectedStatusCode": 405
+	  },
+	  {
+	    "testcaseName": "Invalid Endpoint in forgot password API",
+	    "method": "POST",
+	    "endpoint": "/login/forgotpassword/confim",
+	    "contentType": "application/json",
+	    "forgotPasswordRequest": {
+	      "userLoginEmailId": "Team06@gmail.com"
+	    },
+	    "expectedStatusCode": 404
+	  },
+	  {
+	    "testcaseName": "Empty Email in forgot password API",
+	    "method": "POST",
+	    "endpoint": "/login/forgotpassword/confirmEmail",
+	    "contentType": "application/json",
+	    "forgotPasswordRequest": {
+	      "userLoginEmailId": ""
+	    },
+	    "expectedStatusCode": 400
+	  },
+	  {
+	    "testcaseName": "Invalid Email in forgot password API",
+	    "method": "POST",
+	    "endpoint": "/login/forgotpassword/confirmEmail",
+	    "contentType": "application/json",
+	    "forgotPasswordRequest": {
+	      "userLoginEmailId": "Team06gmail.com"
+	    },
+	    "expectedStatusCode": 400
+	  },
+	  {
+	    "testcaseName": "Null Email in forgot password API",
+	    "method": "POST",
+	    "endpoint": "/login/forgotpassword/confirmEmail",
+	    "contentType": "application/json",
+	    "forgotPasswordRequest": {
+	      "userLoginEmailId": null
+	    },
+	    "expectedStatusCode": 400
+	  },
+	  {
+	    "testcaseName": "Unregistered Email in forgot password API",
+	    "method": "POST",
+	    "endpoint": "/login/forgotpassword/confirmEmail",
+	    "contentType": "application/json",
+	    "forgotPasswordRequest": {
+	      "userLoginEmailId": "Teamsixxx@gmail.com"
+	    },
+	    "expectedStatusCode": 400
+	  },
     {
       "testcaseName": "Create Program",
       "endpoint": "/saveprogram",
