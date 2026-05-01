@@ -97,6 +97,69 @@
       }
     }
   ],
+  
+  "PutRequest": [
+    {
+      "testcaseName": "Valid Program ID Chaining",
+	  "method": "PUT",
+      "endpoint": "/putprogram/{programId}",
+      "contentType": "application/json",
+      "programRequest": {
+        "programName": "UpdasixProg",
+        "programDescription": "Updated progSix",
+        "programStatus": "Active"
+      },
+      "expectedStatusCode": 200
+    },
+	
+	{
+	   "testcaseName": "Invalid Program ID",
+	   "method": "PUT",
+	   "endpoint": "/putprogram/999",
+	   "contentType": "application/json",
+	   "programRequest": {
+	     "programName": "UpdasixProg",
+	     "programDescription": "Updated progSix",
+	     "programStatus": "Active"
+	   },
+	   "expectedStatusCode": 404
+	 },
+	 {
+	    "testcaseName": "Without Request Body",
+		"method": "PUT",
+	    "endpoint": "/putprogram/{programId}",
+	    "contentType": "application/json",
+		"bodyType": "none",
+	    "expectedStatusCode": 400
+	  },
+	  
+	  {
+	     "testcaseName": "Invalid Method",
+	     "method": "POST",
+	     "endpoint": "/putprogram/{programId}",
+	     "contentType": "application/json",
+	     "programRequest": {
+	       "programName": "UpdasixProg",
+	       "programDescription": "Updated progSix",
+	       "programStatus": "Active"
+	     },
+	     "expectedStatusCode": 405
+	   },
+	   
+	   {
+	      "testcaseName": "Invalid Endpoint",
+		  "method": "PUT",
+	      "endpoint": "/invalidprogram/{programId}",
+	      "contentType": "application/json",
+	      "programRequest": {
+	        "programName": "UpdasixProg",
+	        "programDescription": "Updated progSix",
+	        "programStatus": "Active"
+	      },
+	      "expectedStatusCode": 404
+	    }		
+		],
+	 
   "DeleteRequest": [
 	  {
 	    "testcaseName": "DeleteProgram ByID",
