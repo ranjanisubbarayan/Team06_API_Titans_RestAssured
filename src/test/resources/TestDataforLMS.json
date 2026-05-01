@@ -103,6 +103,32 @@
 	    "endpoint": "/deletebyprogid/3109",
 	    "expectedStatusCode": 404,
 	    "expectedMessage": "deleted"
-	  }
+	  },
+	  {
+	    "testcaseName": "valid program ID chaining",
+	    "endpoint": "/deletebyprogid/{programId}",
+	    "method": "DELETE",
+	    "expectedStatusCode": 200
+	  },
+	  {	  
+		"testcaseName": "invalid alphabets in program ID endpoints",
+	    "method": "DELETE",
+	    "endpoint": "/deletebyprogid/abc",
+	    "expectedStatusCode": 404
+	    
+	  },
+	  {
+	     "testcaseName": "invalid endpoint",
+	     "method": "DELETE",
+	     "endpoint": "/deletebyprog",
+	     "expectedStatusCode": 404
+	   },
+	   
+	   {
+	      "testcaseName": "HTTPS request invalid method",
+	      "method": "POST",
+	      "endpoint": "/deletebyprogid/{programId}",
+	      "expectedStatusCode": 405
+	    }
   ]
 }
