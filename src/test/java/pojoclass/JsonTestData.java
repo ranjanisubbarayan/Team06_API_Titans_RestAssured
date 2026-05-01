@@ -21,8 +21,8 @@ public class JsonTestData {
     @JsonProperty("loginRequest")
     public Login loginRequest;
     
-//    @JsonProperty("BatchData")
-//    public Data data;
+    @JsonProperty("method")
+    public String  method;
 //    
 //    public Data getData() {
 //    	return data;
@@ -76,6 +76,15 @@ public class JsonTestData {
 
     public void setEndpoint(String endpoint) {
         this.endpoint = endpoint;
+    }
+    
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
     }
 
     public String getStatusmessage() {
@@ -139,4 +148,11 @@ public class JsonTestData {
         return expectedMessage;
     }
     
+    public Integer getexpectedStatusCode() {
+        return expectedStatusCode;
+    }
+    
+    public void setexpectedStatusCode(int expectedStatusCode) {
+        this.expectedStatusCode = expectedStatusCode;
+    }
 }

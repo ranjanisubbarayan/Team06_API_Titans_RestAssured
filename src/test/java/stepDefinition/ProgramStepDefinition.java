@@ -68,7 +68,7 @@ public class ProgramStepDefinition extends Base {
     @Then("Admin receives Status with response body in GET program API")
     public void admin_receives_status_with_response_body_in_get_program_api() {
         
-        assertEquals(response.getStatusCode(), testData.getExpectedStatus());
+        assertEquals(response.getStatusCode(), testData.getexpectedStatusCode());
         log.info("admin received the response body with the Status Code: {}", response.getStatusCode());
     	log.info("Response Body:\n{}", response.asPrettyString());
     }	
@@ -131,20 +131,25 @@ public class ProgramStepDefinition extends Base {
     	
     }
 
-    @Then("Admin receives {int} Created Status with response body in program API")
-    public void admin_receives_created_status_with_response_body_in_program_api(Integer statusCode) {
+    @Then("Admin receives Created Status with response body in program API")
+    public void admin_receives_created_status_with_response_body_in_program_api() {
      
     	log.info("Response Body:\n{}", response.asString());
     	
-		if (response.getStatusCode() == statusCode.intValue()) {
+		if (response.getStatusCode() == testData.getexpectedStatusCode()) {
 			int programId = response.jsonPath().getInt("programId");
 			String programName = response.jsonPath().getString("programName");
 			ScenarioContext.set("programId", programId);
 			ScenarioContext.set("programName", programName);
 		}
-    	assertEquals(response.getStatusCode(), statusCode.intValue());
-    	log.info("admin received the response body for the add program module with the Status Code: {}", response.getStatusCode());
+    	assertEquals(response.getStatusCode(),testData.getexpectedStatusCode());
+    	
+    	log.info("admin received the response body for the add program module with the Actual Status Code: {}", response.getStatusCode());
+    	
+    	log.info("admin received the response body for the add program module with the Expected Status Code: {}", testData.getexpectedStatusCode());
     }
+    
+    
     @Then("Admin Validates response body matches JSON schema in  in POST program API")
     public void admin_validates_response_body_matches_json_schema_in_in_post_program_api() {
   	 
@@ -191,11 +196,74 @@ public void admin_sends_a_https_delete_request_to_the_valid_endpoint_in_program_
 @Then("Admin receives Status with response body in DELETE program API")
 public void admin_receives_status_with_response_body_in_delete_program_api() {
 	
-	assertEquals(response.getStatusCode(), testData.getExpectedStatus());
+	assertEquals(response.getStatusCode(), testData.getexpectedStatusCode());
      log.info("admin received the response body with the Status Code: {}", response.getStatusCode());
  	log.info("Response Body:\n{}", response.asPrettyString());
  
 }
+
+
+
+@Given("Admin creates delete request with {string} for the delete program API")
+public void admin_creates_delete_request_with_for_the_delete_program_api(String scenarioName)throws IOException  {
+	
+	   TestcaseWrapper wrapper = getTestData();
+
+	    testData = JsonReader.getTestDataByScenarioName(
+	            scenarioName,
+	            wrapper.getDeleteRequest()
+	    );
+	    
+	    request = createTokenRequest(); 
+        log.info("Delete Program Request created WITH Authorization for {}", scenarioName );
+   
+}
+
+@When("Admin sends DELETE request for {string} for the delete program API")
+public void admin_sends_delete_request_for_for_the_delete_program_api(String endpointscenario) {
+	
+	 Integer programId = ScenarioContext.get("programId", Integer.class);
+	  
+	 String endpoint = testData.getEndpoint();
+	 
+    if (endpoint.contains("{programId}")) {
+		    endpoint = endpoint.replace("{programId}", String.valueOf(programId));
+		}
+	 
+	 if (testData.getMethod().equalsIgnoreCase("POST")) {
+
+	        response = request
+	                .log().all()
+	                .when()
+	                .post(endpoint);
+	     log.info("Delete program with invalid method {}",testData.getMethod());   
+	        
+	 }else {
+
+	        response = request
+	                .log().all()
+	                .when()
+	                .delete(endpoint);
+	        
+	        log.info("Delete program with valid method {}",testData.getMethod()); 
+	 }
+	 
+	 log.info("Delete program Request has been sent to endpoint : {}", endpoint);
+}
+
+@Then("Admin validates response for {string} for the delete program API")
+public void admin_validates_response_for_for_the_delete_program_api(String scenarioName) {
+	
+	
+	 log.info("Response Body:\n{}", response.asPrettyString());	 
+	 
+	  assertEquals(response.getStatusCode(), testData.getexpectedStatusCode());
+	  
+	  log.info("Validatinf delete program request for {} with actual status code {}" , scenarioName ,testData.getexpectedStatusCode() );
+   
+	 
+}
+
 }
 
 

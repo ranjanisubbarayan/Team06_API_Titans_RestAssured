@@ -51,7 +51,7 @@ public class loginStepDefinition extends Base  {
 	public void admin_receives_created_with_auto_generated_token_for_the_login_API(Integer statusCode) {
 		
 		log.info("Validating the Actual Status Code for the login with Valid credentials: {}", response.getStatusCode());
-		log.info("Validating the Expected Status Code for the login API with Valid Credentials: {}", testData.getExpectedStatus());
+		log.info("Validating the Expected Status Code for the login API with Valid Credentials: {}", testData.getexpectedStatusCode());
 		 assertEquals(response.getStatusCode(), statusCode.intValue());
 			log.info(response.asPrettyString());		
 	}
@@ -98,9 +98,9 @@ public void admin_receives_the_response_for_for_the_login_API(String scenarioNam
 	
 	log.info("Validating the Actual Status Code  {} for the login API: {}", scenarioName,response.getStatusCode());
     
-	log.info("Validating the Expected Status Code {} for the login API: {}", scenarioName, testData.getExpectedStatus());
+	log.info("Validating the Expected Status Code {} for the login API: {}", scenarioName, testData.getexpectedStatusCode());
 	
-	 assertEquals(response.getStatusCode(), testData.getExpectedStatus());
+	 assertEquals(response.getStatusCode(), testData.getexpectedStatusCode());
 }
 
 
