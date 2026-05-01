@@ -14,7 +14,7 @@ public class Base {
 	
 	public RequestSpecification createRequest() throws IOException {
 		
-		request = given()
+		request = given().log().all()
 				  .header("Content-Type", "application/json")
 		          .baseUri(configReader.getProperty("BaseURL"));	        		
 		return request;
