@@ -24,3 +24,22 @@ Scenario Outline: Validate Negative login API scenarios
       | Login with empty password             |
       | Login without request body            |
      
+     
+     
+@ForgotpasswordAPI
+  Scenario Outline: Validate Forgot Password Confirm email LoginAPI scenarios
+    Given Admin creates forgot password POST request with "<scenarioName>"
+    When Admin sends a HTTPS request to the valid endpoint for forgot password API with "<scenarioName>"
+    Then Admin validates forgot password response with "<scenarioName>"
+    Then Admin Validates response body matches JSON schema in forgot password API
+
+    Examples:
+      | scenarioName|
+      |Valid Email in forgot password API|
+      |Invalid Content Type in forgot password API|
+      |Invalid Method in forgot password API|
+      |Invalid Endpoint in forgot password API|
+      |Empty Email in forgot password API|
+      |Invalid Email in forgot password API|
+      |Null Email in forgot password API|
+      |Unregistered Email in forgot password API|

@@ -1,9 +1,11 @@
 package stepDefinition;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 import java.io.IOException;
 import pojoclass.TestcaseWrapper;
 import utilities.JsonReader;
+import pojoclass.ForgotPasswordRequest;
 import pojoclass.JsonTestData;
 import pojoclass.Login;
 import io.cucumber.java.en.Given;
@@ -22,6 +24,7 @@ public class loginStepDefinition extends Base  {
 	   Response response;
 	   Login loginRequest;
 	   JsonTestData testData;
+	   ForgotPasswordRequest forgotPasswordRequest;
 	   
 	   private static final Logger log = LoggerFactory.getLogger(loginStepDefinition.class);
 	
@@ -104,7 +107,77 @@ public void admin_receives_the_response_for_for_the_login_API(String scenarioNam
 }
 
 
+@Given("Admin creates forgot password POST request with {string}")
+public void admin_creates_forgot_password_post_request_with(String scenarioName)throws IOException  {
+	 request = createRequest();
+	 TestcaseWrapper wrapper = getTestData();
+	 testData = JsonReader.getTestDataByScenarioName(scenarioName, wrapper.getPostRequest());
+	  
+	 request.contentType(testData.getContentType());
+	
+	 
+	    if ("text/plain".equalsIgnoreCase(testData.getContentType())) {
+	        request.body(testData.getRawBody()); 
 
+	    } else if (testData.getForgotPasswordRequest() != null) {
+	    	   request.body(testData.getForgotPasswordRequest());
+	    }
+  
+     
+     log.info("Admin creates POST request for forgot password API {}", scenarioName);
+}
 
+@When("Admin sends a HTTPS request to the valid endpoint for forgot password API with {string}")
+public void admin_sends_a_https_request_to_the_valid_endpoint_for_forgot_password_api_with(String scenarioName) {
+    
+	 
+	 if (testData.getMethod().equalsIgnoreCase("GET")) {
 
+	        response = request
+	                .log().all()
+	                .when()
+	                .get(testData.getEndpoint());
+	     log.info("Forgot password confirm API call with invalid method {} for {}",testData.getMethod(), scenarioName);   
+	        
+	 }else {
+
+	        response = request
+	                .log().all()
+	                .when()
+	                .post(testData.getEndpoint());
+	        
+	        log.info("Forgot password confirm API call with valid method {} for {} ",testData.getMethod(), scenarioName); 
+	 }
+	 
+}
+
+@Then("Admin validates forgot password response with {string}")
+public void admin_validates_forgot_password_response_with(String scenarioName) {
+   
+	log.info("Response Body:\n{}", response.asPrettyString());
+	
+	log.info("Validating the Actual Status Code  {} for the forgot password confirmation API: {}", scenarioName,response.getStatusCode());
+    
+	log.info("Validating the Expected Status Code {} for the forgot password confirmation API: {}", scenarioName, testData.getexpectedStatusCode());
+	
+	 assertEquals(response.getStatusCode(), testData.getexpectedStatusCode());
+	
+}
+
+@Then("Admin Validates response body matches JSON schema in forgot password API")
+public void admin_validates_response_body_matches_json_schema_in_forgot_password_api() {
+	if (response.getStatusCode() == 201) {
+	  try {      
+		response.then().log().all()
+	                .assertThat()
+	                .body(matchesJsonSchemaInClasspath("schema/loginSchema.json"));
+	      	        log.info("Schema validation Passed successfully for the forgot password confirmation API response");
+		
+	    } catch (AssertionError e) {
+
+	        log.error("Schema validation Failed for the forgot password confirmation API response");
+	        throw e; 
+	    }
+}
+}
 }
