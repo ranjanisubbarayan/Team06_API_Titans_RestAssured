@@ -156,7 +156,44 @@
       "testcaseName": "Get All Programs With Users",
       "endpoint": "/allProgramsWithUsers",
       "expectedStatusCode": 200
-    }
+    },
+	{
+	   "testcaseName": "Logout Successfully",
+	   "method": "GET",
+	   "endpoint": "/logoutlms",
+	   "expectedStatusCode": 200,
+	   "expectedMessage": "Logout successful"
+	 },
+	 {
+	   "testcaseName": "Logout With Invalid Endpoint",
+	   "method": "GET",
+	   "endpoint": "/logoutlmswrong",
+	   "expectedStatusCode": 404
+	 },
+	 {
+	   "testcaseName": "Logout With Invalid Method",
+	   "method": "POST",
+	   "endpoint": "/logoutlms",
+	   "expectedStatusCode": 405
+	 },
+	 {
+	   "testcaseName": "Logout With Invalid Token",
+	   "method": "GET",
+	   "endpoint": "/logoutlms",
+	   "expectedStatusCode": 401
+	 },
+	 {
+	   "testcaseName": "Logout with No Auth",
+	   "method": "GET",
+	   "endpoint": "/logoutlms",
+	   "expectedStatusCode": 401
+	 },
+	 {
+	   "testcaseName": "Logout With Expired Token",
+	   "method": "GET",
+	   "endpoint": "/logoutlms",
+	   "expectedStatusCode": 401
+	 }
   ],
 
   "Tests": [
