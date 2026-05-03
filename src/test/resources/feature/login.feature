@@ -2,7 +2,7 @@ Feature: User Sign In API
 
 Background: Admin sets No Auth 
 
-@postlogin_ValidCredential
+@login_ValidCredential
 
   Scenario: Admin generates token with valid credential for the login API
     Given Admin creates POST request with valid credentials for the login API
@@ -18,11 +18,22 @@ Scenario Outline: Validate Negative login API scenarios
   Then Admin receives the response for "<scenarioName>" for the login API
 
     Examples:
-      | scenarioName                         |
-      | Login with invalid content type       |
-      | Login with empty email                |
-      | Login with empty password             |
-      | Login without request body            |
+      |scenarioName|
+      |Login with invalid content type|
+      |Login with empty email|
+      |Login with empty password|
+      |Login without request body|
+      |Login With Invalid Method|
+      |Login With Invalid Base URL|
+      |Login With Invalid Endpoint|
+      |Login With Special Characters Email|
+      |Login With Email Having Spaces|
+      |Login With Null Email|
+      |Login With Unregistered Email|
+      |Login With Special Characters Password|
+      |Login With Password Having Spaces|
+      |Login With Null Password|
+    
      
      
      

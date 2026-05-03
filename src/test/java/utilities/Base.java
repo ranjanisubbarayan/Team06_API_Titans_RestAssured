@@ -30,6 +30,12 @@ public class Base {
 	            .baseUri(configReader.getProperty("BaseURL"));
 	}
 	
+	public RequestSpecification createInvalidBaseRequest() throws IOException  {
+	    return given()
+	    		.log().all()
+	            .header("Content-Type", "application/json")
+	            .baseUri(configReader.getProperty("InvabaseURL"));
+	}
 	
 	public static TestcaseWrapper getTestData() {
 		

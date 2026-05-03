@@ -6,7 +6,7 @@
       "contentType": "application/json",
       "loginRequest": {
         "userLoginEmailId": "Team06@gmail.com",
-        "password": "TeamSix@123"
+        "password": "Team06@456"
       },
       "expectedType": "Bearer",
       "expectedEmail": "Team06@gmail.com",
@@ -15,6 +15,7 @@
     },
     {
       "testcaseName": "Login with empty password",
+	  "method": "POST",
       "endpoint": "/login",
       "contentType": "application/json",
       "loginRequest": {
@@ -25,6 +26,7 @@
     },
     {
       "testcaseName": "Login with empty email",
+	  "method": "POST",
       "endpoint": "/login",
       "contentType": "application/json",
       "loginRequest": {
@@ -35,27 +37,129 @@
     },
     {
       "testcaseName": "Login without request body",
+	  "method": "POST",
       "endpoint": "/login",
       "contentType": "application/json",
       "expectedStatusCode": 400
     },
     {
       "testcaseName": "Login with invalid content type",
+	  "method": "POST",
       "endpoint": "/login",
       "contentType": "text/plain",
        "rawBody": "{\"userLoginEmailId\":\"Team06@gmail.com\",\"password\":\"TeamSix@123\"}",
       "expectedStatusCode": 415
     },
-    {
-      "testcaseName": "Login with invalid endpoint",
-      "endpoint": "/loginnnn",
-      "contentType": "application/json",
-      "loginRequest": {
-        "userLoginEmailId": "Team06@gmail.com",
-        "password": "TeamSix@123"
-      },
-      "expectedStatusCode": 404
-    },
+	{
+	    "testcaseName": "Login With Invalid Method",
+	    "method": "GET",
+	    "endpoint": "/login",
+	    "contentType": "application/json",
+	    "loginRequest": {
+	      "userLoginEmailId": "Team06@gmail.com",
+	      "password": "TeamSix@123"
+	    },
+	    "expectedStatusCode": 405
+	  },
+	  {
+	    "testcaseName": "Login With Invalid Endpoint",
+	    "method": "POST",
+	    "endpoint": "/loginnn",
+	    "contentType": "application/json",
+	    "loginRequest": {
+	      "userLoginEmailId": "Team06@gmail.com",
+	      "password": "TeamSix@123"
+	    },
+	    "expectedStatusCode": 401
+	  },
+	  {
+	    "testcaseName": "Login With Special Characters Email",
+	    "method": "POST",
+	    "endpoint": "/login",
+	    "contentType": "application/json",
+	    "loginRequest": {
+	      "userLoginEmailId": "Team@@06@gmail.com",
+	      "password": "TeamSix@123"
+	    },
+	    "expectedStatusCode": 400
+	  },
+	  {
+	    "testcaseName": "Login With Email Having Spaces",
+	    "method": "POST",
+	    "endpoint": "/login",
+	    "contentType": "application/json",
+	    "loginRequest": {
+	      "userLoginEmailId": "Team06 @gmail.com",
+	      "password": "TeamSix@123"
+	    },
+	    "expectedStatusCode": 400
+	  },
+	  {
+	    "testcaseName": "Login With Null Email",
+	    "method": "POST",
+	    "endpoint": "/login",
+	    "contentType": "application/json",
+	    "loginRequest": {
+	      "userLoginEmailId": null,
+	      "password": "TeamSix@123"
+	    },
+	    "expectedStatusCode": 400
+	  },
+	  {
+	    "testcaseName": "Login With Unregistered Email",
+	    "method": "POST",
+	    "endpoint": "/login",
+	    "contentType": "application/json",
+	    "loginRequest": {
+	      "userLoginEmailId": "TeamSixx@gmail.com",
+	      "password": "TeamSix@123"
+	    },
+	    "expectedStatusCode": 400
+	  },
+	  {
+	    "testcaseName": "Login With Special Characters Password",
+	    "method": "POST",
+	    "endpoint": "/login",
+	    "contentType": "application/json",
+	    "loginRequest": {
+	      "userLoginEmailId": "Team06@gmail.com",
+	      "password": "TeamSix@@@###"
+	    },
+	    "expectedStatusCode": 400
+	  },
+	  {
+	    "testcaseName": "Login With Password Having Spaces",
+	    "method": "POST",
+	    "endpoint": "/login",
+	    "contentType": "application/json",
+	    "loginRequest": {
+	      "userLoginEmailId": "Team06@gmail.com",
+	      "password": "Team Six 123"
+	    },
+	    "expectedStatusCode": 400
+	  },
+	  {
+	    "testcaseName": "Login With Null Password",
+	    "method": "POST",
+	    "endpoint": "/login",
+	    "contentType": "application/json",
+	    "loginRequest": {
+	      "userLoginEmailId": "Team06@gmail.com",
+	      "password": null
+	    },
+	    "expectedStatusCode": 400
+	  },
+	  {
+	    "testcaseName": "Login With Invalid Base URL",
+	    "method": "POST",
+	    "endpoint": "/login",
+	    "contentType": "application/json",
+	    "loginRequest": {
+	      "userLoginEmailId": "Team06@gmail.com",
+	      "password": "TeamSix@123"
+	    },
+	    "expectedStatusCode": 404
+	  },
 	{
 	    "testcaseName": "Valid Email in forgot password API",
 	    "method": "POST",
@@ -193,7 +297,86 @@
 	   "method": "GET",
 	   "endpoint": "/logoutlms",
 	   "expectedStatusCode": 401
-	 }
+	 },
+	 {
+	    "testcaseName": "Get All Programs Valid Endpoint",
+	    "method": "GET",
+	    "endpoint": "/allPrograms",
+	    "expectedStatusCode": 200
+	  },
+	  {
+	    "testcaseName": "Get All Programs Invalid Endpoint",
+	    "method": "GET",
+	    "endpoint": "/allProgramsss",
+	    "expectedStatusCode": 404
+	  },
+	  {
+	    "testcaseName": "Get All Programs Invalid Method",
+	    "method": "POST",
+	    "endpoint": "/allPrograms",
+	    "expectedStatusCode": 405
+	  },
+	  {
+	    "testcaseName": "Get All Programs Without Auth",
+	    "method": "GET",
+	    "endpoint": "/allPrograms",
+	    "expectedStatusCode": 401
+	  },
+	  {
+	    "testcaseName": "Get Program By ID Valid",
+	    "method": "GET",
+	    "endpoint": "/programs/{programId}",
+	    "expectedStatusCode": 200
+	  },
+	  {
+	    "testcaseName": "Get Program By ID Invalid Program ID",
+	    "method": "GET",
+	    "endpoint": "/programs/999999",
+	    "expectedStatusCode": 404
+	  },
+	  {
+	    "testcaseName": "Get Program By ID Invalid BaseURI",
+	    "method": "GET",
+	    "endpoint": "/programs/{programId}",
+	    "expectedStatusCode": 404
+	  },
+	  {
+	    "testcaseName": "Get Program By ID Invalid Endpoint",
+	    "method": "GET",
+	    "endpoint": "/programsss/{programId}",
+	    "expectedStatusCode": 404
+	  },
+	  {
+	    "testcaseName": "Get Program By ID Without Auth",
+	    "method": "GET",
+	    "endpoint": "/programs/{programId}",
+
+	    "expectedStatusCode": 401
+	  },
+	  {
+	    "testcaseName": "Get All Programs With Users Valid Endpoint",
+	    "method": "GET",
+	    "endpoint": "/allProgramsWithUsers",
+	    "expectedStatusCode": 200
+	  },
+	  {
+	    "testcaseName": "Get All Programs With Users Invalid Endpoint",
+	    "method": "GET",
+	    "endpoint": "/allProgramswtUsersss",
+	    "expectedStatusCode": 404
+	  },
+	  {
+	    "testcaseName": "Get All Programs With Users Invalid Method",
+	    "method": "POST",
+	    "endpoint": "/allProgramsWithUsers",
+	    "expectedStatusCode": 405
+	  },
+	  {
+	    "testcaseName": "Get All Programs With Users Without Auth",
+	    "method": "GET",
+	    "endpoint": "/allProgramsWithUsers",
+	    "expectedStatusCode": 401
+	  }
   ],
 
   "Tests": [
@@ -308,5 +491,112 @@
 	      "endpoint": "/deletebyprogid/{programId}",
 	      "expectedStatusCode": 405
 	    }
+  ],
+  "ResetPasswordRequest": [
+    {
+      "testcaseName": "Reset Password With Valid Token",
+      "method": "POST",
+      "endpoint": "/resetPassword",
+      "contentType": "application/json",
+      "authType": "Bearer",
+      "resetPasswordRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": "Team06@456"
+      },
+      "expectedStatusCode": 200
+    },
+    {
+      "testcaseName": "Reset Password With Invalid Email",
+      "method": "POST",
+      "endpoint": "/resetPassword",
+      "contentType": "application/json",
+      "authType": "Bearer",
+      "resetPasswordRequest": {
+        "userLoginEmailId": "Team06gmail.com",
+        "password": "Team06@456"
+      },
+      "expectedStatusCode": 401
+    },
+    {
+      "testcaseName": "Reset Password With Invalid Password",
+      "method": "POST",
+      "endpoint": "/resetPassword",
+      "contentType": "application/json",
+      "authType": "Bearer",
+      "resetPasswordRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": "abc"
+      },
+      "expectedStatusCode": 401
+    },
+    {
+      "testcaseName": "Reset Password With Invalid Endpoint",
+      "method": "POST",
+      "endpoint": "/resetPasswordWrong",
+      "contentType": "application/json",
+      "authType": "Bearer",
+      "resetPasswordRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": "Team06@456"
+      },
+      "expectedStatusCode": 401
+    },
+    {
+      "testcaseName": "Reset Password With Invalid Content Type",
+      "method": "POST",
+      "endpoint": "/resetPassword",
+      "contentType": "text/plain",
+      "authType": "Bearer",
+      "rawBody": "{\"userLoginEmailId\":\"Team06@gmail.com\",\"password\":\"Team06@456\"}",
+      "expectedStatusCode": 401
+    },
+    {
+      "testcaseName": "Reset Password With Invalid Method",
+      "method": "GET",
+      "endpoint": "/resetPassword",
+      "contentType": "application/json",
+      "authType": "Bearer",
+      "resetPasswordRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": "Team06@456"
+      },
+      "expectedStatusCode": 401
+    },
+    {
+      "testcaseName": "Reset Password Without Authentication",
+      "method": "POST",
+      "endpoint": "/resetPassword",
+      "contentType": "application/json",
+      "authType": "NoAuth",
+      "resetPasswordRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": "Team06@456"
+      },
+      "expectedStatusCode": 401
+    },
+    {
+      "testcaseName": "Reset Password With Expired Token",
+      "method": "POST",
+      "endpoint": "/resetPassword",
+      "contentType": "application/json",
+      "authType": "CustomToken",
+      "resetPasswordRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": "Team06@456"
+      },
+      "expectedStatusCode": 401
+    },
+    {
+      "testcaseName": "Reset Password With Empty Token",
+      "method": "POST",
+      "endpoint": "/resetPassword",
+      "contentType": "application/json",
+      "authType": "CustomToken",
+      "resetPasswordRequest": {
+        "userLoginEmailId": "Team06@gmail.com",
+        "password": "Team06@456"
+      },
+      "expectedStatusCode": 401
+    }
   ]
 }
