@@ -26,6 +26,14 @@ public class JsonTestData {
     
     @JsonProperty("method")
     public String  method;
+    
+    @JsonProperty("resetPasswordRequest")
+    public ResetPasswordRequest resetPasswordRequest;
+    
+    @JsonProperty("authType")
+    public String authType;
+    
+    
 //    
 //    public Data getData() {
 //    	return data;
@@ -175,5 +183,21 @@ public class JsonTestData {
 
     public void setForgotPasswordRequest(ForgotPasswordRequest forgotPasswordRequest) {
         this.forgotPasswordRequest = forgotPasswordRequest;
+    }
+    
+    public ResetPasswordRequest getResetPasswordRequest() {
+        return resetPasswordRequest;
+    }
+
+    public void setResetPasswordRequest(ResetPasswordRequest resetPasswordRequest) {
+        this.resetPasswordRequest = resetPasswordRequest;
+    }
+
+    public String getAuthType() {
+        return authType;
+    }
+
+    public void setAuthType(String authType) {
+        this.authType = authType;
     }
 }

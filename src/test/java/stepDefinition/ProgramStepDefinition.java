@@ -27,7 +27,7 @@ public class ProgramStepDefinition extends Base {
     JsonTestData testData;
     ProgramRequest programRequest;
 
-    List<ProgramResponse> programList;
+    List<ProgramResponse> programResponseasList;
     
     
     private static final Logger log = LoggerFactory.getLogger(ProgramStepDefinition.class);
@@ -45,10 +45,7 @@ public class ProgramStepDefinition extends Base {
     	
     	TestcaseWrapper wrapper = getTestData();
 
-    	testData = JsonReader.getTestDataByScenarioName(
-    	        "Get All Programs",
-    	        wrapper.getGetRequest()
-    	);
+    	testData = JsonReader.getTestDataByScenarioName("Get All Programs", wrapper.getGetRequest());
 
     	log.info("Get request has been created for the LMS API");
     	
@@ -90,7 +87,7 @@ public class ProgramStepDefinition extends Base {
     	
    }
 
-
+   
    
 
     @Given("Admin creates POST Request with valid request body in program API")
@@ -358,6 +355,73 @@ public void admin_validates_response_for_for_the_delete_program_api(String scena
 	  log.info("Validatinf delete program request for {} with actual status code {}" , scenarioName ,testData.getexpectedStatusCode() );
    
 	 
+}
+
+@Given("Admin creates GET request for {string} in program API")
+public void admin_creates_get_request_for_in_program_api(String scenarioName) throws IOException  {
+    
+	TestcaseWrapper wrapper = getTestData();
+
+	testData = JsonReader.getTestDataByScenarioName(scenarioName, wrapper.getGetRequest());
+	
+    if ((scenarioName.equalsIgnoreCase("Get Program By ID Invalid BaseURI"))) {
+        request = createInvalidBaseRequest();
+        
+        log.info("GET Program API request has been sent with {}",scenarioName );
+        
+    } else if ((scenarioName.equalsIgnoreCase("Without Auth"))) {
+        request = createRequest();
+        
+        log.info("GET Program API request has been sent with {}",scenarioName );
+    } else if (request == null){
+        request = createTokenRequest();
+        
+        log.info("GET Program API request has been sent with {}",scenarioName );
+    }
+
+              
+}
+
+@When("Admin sends GET request for {string} in program API")
+public void admin_sends_get_request_for_in_program_api(String scenarioName) {
+   
+	 Integer programId = ScenarioContext.get("programId", Integer.class);
+	  
+	 String endpoint = testData.getEndpoint();
+	 
+    if (endpoint.contains("{programId}")) {
+		    endpoint = endpoint.replace("{programId}", String.valueOf(programId));
+		}
+	 
+    
+	 if (testData.getMethod().equalsIgnoreCase("POST")) {
+
+	        response = request
+	                .log().all()
+	                .when()
+	                .post(endpoint);
+	     log.info("GET Program API with invalid method {} for the scenario {} ",testData.getMethod(), scenarioName);   
+	        
+	 }else {
+
+	        response = request
+	                .log().all()
+	                .when()
+	                .get(endpoint);
+	        
+	        log.info("GET Program API with valid method {} for the scenario {}",testData.getMethod(),scenarioName); 
+	 }
+}
+
+@Then("Admin validates GET response for {string} in program API")
+public void admin_validates_get_response_for_in_program_api(String scenarioName) {
+   
+	
+	 log.info("Response Body:\n{}", response.asPrettyString());	 
+	 
+	  assertEquals(response.getStatusCode(), testData.getexpectedStatusCode());
+	  
+	  log.info("Validatinf delete program request for {} with actual status code {}" , scenarioName ,testData.getexpectedStatusCode() );
 }
 
 }

@@ -1,7 +1,6 @@
 package stepDefinition;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
 import java.io.IOException;
 import pojoclass.TestcaseWrapper;
 import utilities.JsonReader;
@@ -14,7 +13,6 @@ import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import utilities.Base;
-import utilities.Token;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -69,17 +67,18 @@ public void admin_creates_post_request_for_for_the_login_API(String scenarioName
 	request = createRequest();
     TestcaseWrapper wrapper = getTestData();
 
-    testData = JsonReader.getTestDataByScenarioName(
-            scenarioName,
-            wrapper.getPostRequest()
-    );
+    testData = JsonReader.getTestDataByScenarioName(scenarioName,wrapper.getPostRequest());
 
     request.contentType(testData.getContentType());
 
     if ("text/plain".equalsIgnoreCase(testData.getContentType())) {
         request.body(testData.getRawBody()); 
 
-    } else if (testData.getLoginRequest() != null) {
+    } else if (scenarioName.equalsIgnoreCase("Login With Invalid Base URL")) {
+        request = createInvalidBaseRequest();
+  } 
+    
+    else if (testData.getLoginRequest() != null) {
         request.body(testData.getLoginRequest()); 
     }
   
@@ -88,11 +87,26 @@ public void admin_creates_post_request_for_for_the_login_API(String scenarioName
 @When("Admin sends request to the valid endpoint for the login API")
 public void admin_sends_request_to_the_valid_endpoint_for_the_login_API() {
 
-	 response = request
-             .when().log().all()
-             .post(testData.getEndpoint());
+	 if (testData.getMethod().equalsIgnoreCase("GET")) {
+
+	        response = request
+	                .log().all()
+	                .when()
+	                .get(testData.getEndpoint());
+	     log.info("Login API call with invalid method {} for {}",testData.getMethod(), testData.getTestcaseName());   
+	        
+	 }else {
+
+	        response = request
+	                .log().all()
+	                .when()
+	                .post(testData.getEndpoint());
+	        
+	        log.info("Forgot password confirm API call with valid method {} for {} ",testData.getMethod(), testData.getTestcaseName()); 
+	 }
 	 
 }
+	 
 
 @Then("Admin receives the response for {string} for the login API")
 public void admin_receives_the_response_for_for_the_login_API(String scenarioName) {
@@ -181,3 +195,6 @@ public void admin_validates_response_body_matches_json_schema_in_forgot_password
 }
 }
 }
+
+
+
