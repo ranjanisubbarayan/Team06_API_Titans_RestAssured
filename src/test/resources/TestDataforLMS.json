@@ -498,7 +498,6 @@
       "method": "POST",
       "endpoint": "/resetPassword",
       "contentType": "application/json",
-      "authType": "Bearer",
       "resetPasswordRequest": {
         "userLoginEmailId": "Team06@gmail.com",
         "password": "Team06@456"
@@ -510,64 +509,58 @@
       "method": "POST",
       "endpoint": "/resetPassword",
       "contentType": "application/json",
-      "authType": "Bearer",
       "resetPasswordRequest": {
         "userLoginEmailId": "Team06gmail.com",
         "password": "Team06@456"
       },
-      "expectedStatusCode": 401
+      "expectedStatusCode": 400
     },
     {
       "testcaseName": "Reset Password With Invalid Password",
       "method": "POST",
       "endpoint": "/resetPassword",
       "contentType": "application/json",
-      "authType": "Bearer",
       "resetPasswordRequest": {
         "userLoginEmailId": "Team06@gmail.com",
         "password": "abc"
       },
-      "expectedStatusCode": 401
+      "expectedStatusCode": 400
     },
     {
       "testcaseName": "Reset Password With Invalid Endpoint",
       "method": "POST",
       "endpoint": "/resetPasswordWrong",
       "contentType": "application/json",
-      "authType": "Bearer",
       "resetPasswordRequest": {
         "userLoginEmailId": "Team06@gmail.com",
         "password": "Team06@456"
       },
-      "expectedStatusCode": 401
+      "expectedStatusCode": 404
     },
     {
       "testcaseName": "Reset Password With Invalid Content Type",
       "method": "POST",
       "endpoint": "/resetPassword",
       "contentType": "text/plain",
-      "authType": "Bearer",
       "rawBody": "{\"userLoginEmailId\":\"Team06@gmail.com\",\"password\":\"Team06@456\"}",
-      "expectedStatusCode": 401
+      "expectedStatusCode": 415
     },
     {
       "testcaseName": "Reset Password With Invalid Method",
       "method": "GET",
       "endpoint": "/resetPassword",
       "contentType": "application/json",
-      "authType": "Bearer",
       "resetPasswordRequest": {
         "userLoginEmailId": "Team06@gmail.com",
         "password": "Team06@456"
       },
-      "expectedStatusCode": 401
+      "expectedStatusCode": 405
     },
     {
       "testcaseName": "Reset Password Without Authentication",
       "method": "POST",
       "endpoint": "/resetPassword",
       "contentType": "application/json",
-      "authType": "NoAuth",
       "resetPasswordRequest": {
         "userLoginEmailId": "Team06@gmail.com",
         "password": "Team06@456"
@@ -579,7 +572,6 @@
       "method": "POST",
       "endpoint": "/resetPassword",
       "contentType": "application/json",
-      "authType": "CustomToken",
       "resetPasswordRequest": {
         "userLoginEmailId": "Team06@gmail.com",
         "password": "Team06@456"
@@ -591,7 +583,6 @@
       "method": "POST",
       "endpoint": "/resetPassword",
       "contentType": "application/json",
-      "authType": "CustomToken",
       "resetPasswordRequest": {
         "userLoginEmailId": "Team06@gmail.com",
         "password": "Team06@456"
