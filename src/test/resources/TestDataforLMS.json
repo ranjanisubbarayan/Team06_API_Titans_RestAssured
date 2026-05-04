@@ -262,6 +262,7 @@
       "expectedStatusCode": 200
     },
 	{
+<<<<<<< Updated upstream
 	   "testcaseName": "Logout Successfully",
 	   "method": "GET",
 	   "endpoint": "/logoutlms",
@@ -377,6 +378,107 @@
 	    "endpoint": "/allProgramsWithUsers",
 	    "expectedStatusCode": 401
 	  }
+=======
+      "testcaseName": "Admin retrieves all batches with valid endpoint",
+      "endpoint": "/batches",
+      "expectedStatusCode": 200
+	},
+{
+      "testcaseName": "Admin retrieves all batches with invalid endpoint",
+      "endpoint": "/batche",
+      "expectedStatusCode": 404
+},
+{
+      "testcaseName": "Admin retrieves all batches with invalid method",
+      "endpoint": "/batches",
+      "expectedStatusCode": 405
+	},
+	{
+      "testcaseName": "Admin retrieves all batches with invalid content type",
+      "endpoint": "/batches",
+      "expectedStatusCode": 415
+	},
+	{
+      "testcaseName": "Admin retrieves a batch with valid batch ID",
+      "endpoint": "/batches/batchId/{batchId}",
+      "expectedStatusCode": 200
+	},
+	{
+      "testcaseName": "Admin retrieves a batch with inactive batch ID",
+      "endpoint": "/batches/batchId/{batchId}",
+      "expectedStatusCode": 200
+	},
+	{
+      "testcaseName": "Admin retrieves a batch with invalid batch ID",
+      "endpoint": "/batches/batchId/{batchId}",
+      "expectedStatusCode": 404
+	},
+	{
+      "testcaseName": "Admin retrieves a batch by batch id with invalid endpoint",
+      "endpoint": "/batches/batchId/123",
+      "expectedStatusCode": 404
+	},
+	{
+      "testcaseName": "Admin retrieves a batch by batch id with invalid method",
+      "endpoint": "/batches/batchId/3980",
+      "expectedStatusCode": 405
+	},
+	{
+      "testcaseName": "Admin retrieves a batch by batch id with invalid content type",
+      "endpoint": "/batches/batchId/3980",
+      "expectedStatusCode": 415
+	},
+	{
+      "testcaseName": "Admin retrieves a batch with valid batch name",
+      "endpoint": "/batches/batchName/{batchName}",
+      "expectedStatusCode": 200
+	},
+	{
+      "testcaseName": "Admin retrieves a batch with invalid batch name",
+      "endpoint": "/batches/batchName/{batchName}",
+      "expectedStatusCode": 404
+	},
+	{
+      "testcaseName": "Admin retrieves a batch by batch name with invalid endpoint",
+      "endpoint": "/batches/batchName/Java",
+      "expectedStatusCode": 404
+	},
+	{
+      "testcaseName": "Admin retrieves a batch by batch name with invalid method",
+      "endpoint": "/batches/batchName/Teamsix-jEOGl_35306",
+      "expectedStatusCode": 405
+	},
+	{
+      "testcaseName": "Admin retrieves a batch by batch name with invalid content type",
+      "endpoint": "/batches/batchName/Teamsix-jEOGl_35306",
+      "expectedStatusCode": 415
+	},
+	{
+      "testcaseName": "Admin retrieves a batch with valid Program Id",
+      "endpoint": "/batches/program/{programId}",
+      "expectedStatusCode": 200
+	},
+	{
+      "testcaseName": "Admin retrieves a batch with invalid Program Id",
+      "endpoint": "/batches/program/{programId}",
+      "expectedStatusCode": 404
+	},
+	{
+      "testcaseName": "Admin retrieves a batch by Program Id with invalid endpoint",
+      "endpoint": "/batches/program/1234",
+      "expectedStatusCode": 404
+	},
+	{
+      "testcaseName": "Admin retrieves a batch by Program Id with invalid method",
+      "endpoint": "/batches/program/1234",
+      "expectedStatusCode": 404
+	},
+	{
+      "testcaseName": "Admin retrieves a batch by Program Id with invalid content type",
+      "endpoint": "/batches/program/1234",
+      "expectedStatusCode": 415
+	}
+>>>>>>> Stashed changes
   ],
 
   "Tests": [
@@ -390,10 +492,318 @@
         "batchName": "Teamsix-XXklJ_01",
         "batchNoOfClasses": 2,
         "batchStatus": "Active",
-        "programId": 3151,
-        "programName": "Teamsix-XXklJ"
+        "programId": null,
+        "programName": ""
       }
+    },
+	{
+      "testcaseName": "create batch program name that does not match the associated program id",
+      "expectedStatus": 201,
+      "endpoint": "/batches",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "Automation Batch",
+        "batchName": "Teamsix_01",
+        "batchNoOfClasses": 2,
+        "batchStatus": "Active",
+        "programId": 3179,
+        "programName": "Teamsix-zHGVH"
+      }
+    },
+	{
+      "testcaseName": "Admin creates batch with only optional fields",
+      "expectedStatus": 400,
+      "endpoint": "/batches",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "Automation Batch",
+        "batchName": "",
+        "batchNoOfClasses": null,
+        "batchStatus": "",
+        "programId": null ,
+        "programName": "Teamsix-zHGVH"
+      }
+    },
+	{
+	"testcaseName": "Admin creates batch with only mandatory fields",
+	"expectedStatus": 201,
+	"endpoint": "/batches",
+	"contentType": "application/json",
+	"BatchData": {
+	"batchDescription": "",
+	"batchName": "",
+     "batchNoOfClasses": 3,
+    "batchStatus": "Active"
+	}
+ },
+ {
+ 	"testcaseName": "without underscore in batch name",
+ 	"expectedStatus": 400,
+ 	"endpoint": "/batches",
+ 	"contentType": "application/json",
+ 	"BatchData": {
+ 	"batchDescription": "Automation Batch",
+     "batchNoOfClasses": 3,
+     "batchStatus": "Active"
+ 	}
+  },
+  {
+   	"testcaseName": "with hyphen in batch name",
+   	"expectedStatus": 400,
+   	"endpoint": "/batches",
+   	"contentType": "application/json",
+   	"BatchData": {
+	"batchDescription": "Automation Batch",
+	"batchNoOfClasses": 3,
+	"batchStatus": "Active"
+	}
+   },
+   {
+  	"testcaseName": "with characters in the suffix of batch name",
+  	"expectedStatus": 400,
+  	"endpoint": "/batches",
+  	"contentType": "application/json",
+	"BatchData": {
+	"batchDescription": "Automation Batch",
+	"batchNoOfClasses": 3,
+	"batchStatus": "Active"
+	}
+  },
+  {
+    "testcaseName": "with special characters in the suffix of batch name",
+    "expectedStatus": 400,
+    "endpoint": "/batches",
+    "contentType": "application/json",
+  	"BatchData": {
+  	"batchDescription": "Automation Batch",
+  	"batchNoOfClasses": 3,
+  	"batchStatus": "Active"
+  	}
+  },
+  {
+  "testcaseName": "with batch name length more than 28 characters",
+  "expectedStatus": 400,
+  "endpoint": "/batches",
+  "contentType": "application/json",
+  "BatchData": {
+   "batchDescription": "Automation Batch",
+   "batchNoOfClasses": 3,
+   "batchStatus": "Active"
     }
+   },
+  {
+ "testcaseName": "with batch name length less than 6 characters",
+ "expectedStatus": 400,
+ "endpoint": "/batches",
+ "contentType": "application/json",
+ "BatchData": {
+  "batchDescription": "Automation Batch",
+  "batchNoOfClasses": 3,
+  "batchStatus": "Active"
+   }
+  },
+  {
+  "testcaseName": "with duplicate batch name",
+  "expectedStatus": 400,
+  "endpoint": "/batches",
+  "contentType": "application/json",
+  "BatchData": {
+   "batchDescription": "Automation Batch",
+   "batchNoOfClasses": 3,
+   "batchStatus": "Active"
+    }
+  },
+  {
+    "testcaseName": "with batch description less than 4 characters",
+    "expectedStatus": 400,
+    "endpoint": "/batches",
+    "contentType": "application/json",
+    "BatchData": {
+     "batchDescription": "Aut",
+     "batchNoOfClasses": 3,
+     "batchStatus": "Active"
+      }
+    },
+{
+    "testcaseName": "with batch description more than 25 characters",
+    "expectedStatus": 400,
+    "endpoint": "/batches",
+    "contentType": "application/json",
+    "BatchData": {
+     "batchDescription": "Automation Batch for learning test automation",
+     "batchNoOfClasses": 3,
+     "batchStatus": "Active"
+  }
+},
+{
+    "testcaseName": "with random characters in status field",
+    "expectedStatus": 400,
+    "endpoint": "/batches",
+    "contentType": "application/json",
+    "BatchData": {
+     "batchDescription": "Automation Batch",
+     "batchNoOfClasses": 3,
+     "batchStatus": "AbCdEf"
+  }
+},
+{
+    "testcaseName": "with random numbers in status field",
+    "expectedStatus": 400,
+    "endpoint": "/batches",
+    "contentType": "application/json",
+    "BatchData": {
+     "batchDescription": "Automation Batch",
+     "batchNoOfClasses": 3,
+     "batchStatus": "1234"
+  }
+},
+{
+    "testcaseName": "with special characters in status field",
+    "expectedStatus": 400,
+    "endpoint": "/batches",
+    "contentType": "application/json",
+    "BatchData": {
+     "batchDescription": "Automation Batch",
+     "batchNoOfClasses": 3,
+     "batchStatus": "@#$%#"
+  }
+},
+{
+    "testcaseName": "with non numeric in number of classes",
+    "expectedStatus": 400,
+    "endpoint": "/batches",
+    "contentType": "application/json",
+    "BatchData": {
+     "batchDescription": "Automation Batch",
+     "batchStatus": "Active"
+  }
+},
+{
+    "testcaseName": "with number of classes length less than 1",
+    "expectedStatus": 400,
+    "endpoint": "/batches",
+    "contentType": "application/json",
+    "BatchData": {
+     "batchDescription": "Automation Batch",
+     "batchNoOfClasses": 0,
+     "batchStatus": "Active"
+  }
+},
+{
+    "testcaseName": "with number of classes length more than 99",
+    "expectedStatus": 400,
+    "endpoint": "/batches",
+    "contentType": "application/json",
+    "BatchData": {
+     "batchDescription": "Automation Batch",
+     "batchNoOfClasses": 101,
+     "batchStatus": "Active"
+  }
+},
+{
+"testcaseName": "Admin creates batch with inactive program ID",
+"expectedStatus": 400,
+"endpoint": "/batches",
+"contentType": "application/json",
+"BatchData": {
+"batchDescription": "Automation Batch",
+"batchName": "Java-oops-inheritance_01",
+"batchNoOfClasses": 2,
+"batchStatus": "Active",
+"programId": 16231 ,
+"programName": "Java-oops-inheritance"
+  }
+},
+{
+"testcaseName": "Admin creates batch with program that is not exist in the system",
+"expectedStatus": 404,
+"endpoint": "/batches",
+"contentType": "application/json",
+"BatchData": {
+"batchDescription": "Automation Batch",
+"batchName": "Java-oops-inheritance_01",
+"batchNoOfClasses": 2,
+"batchStatus": "Active",
+"programId": 2345 ,
+"programName": "Java-oops-inheritance"
+  }
+},
+{
+"testcaseName": "Admin creates batch with invalid endpoint",
+"expectedStatus": 404,
+"endpoint": "/batch",
+"contentType": "application/json",
+"BatchData": {
+"batchDescription": "Automation Batch",
+"batchName": "Java-oops-inheritance_01",
+"batchNoOfClasses": 2,
+"batchStatus": "Active",
+"programId": 16231 ,
+"programName": "Java-oops-inheritance"
+  }
+},
+{
+"testcaseName": "Admin creates batch with invalid content type",
+"expectedStatus": 415,
+"endpoint": "/batches",
+"contentType": "text/plain",
+"BatchData": {
+"batchDescription": "Automation Batch",
+"batchName": "Java-oops-inheritance_01",
+"batchNoOfClasses": 2,
+"batchStatus": "Active",
+"programId": 16231 ,
+"programName": "Java-oops-inheritance"
+  }
+},
+{
+"testcaseName": "Admin creates batch with invalid method",
+"expectedStatus": 405,
+"endpoint": "/batches",
+"contentType": "application/json",
+"BatchData": {
+"batchDescription": "Automation Batch",
+"batchName": "Java-oops-inheritance_01",
+"batchNoOfClasses": 2,
+"batchStatus": "Active",
+"programId": 16231 ,
+"programName": "Java-oops-inheritance"
+  }
+},
+{
+  "testcaseName": "No Auth Login",
+  "endpoint": "/login",
+  "contentType": "application/json",
+  "loginRequest": {}
+},
+	{
+	"testcaseName": "Admin creates a batch with without authorization.",
+	"expectedStatus": 401,
+	"endpoint": "/batches",
+	"contentType": "application/json",
+	"BatchData": {
+	"batchDescription": "Automation Batch",
+	"batchName": "Java-oops-inheritance_01",
+	"batchNoOfClasses": 2,
+	"batchStatus": "Active",
+	"programId": 16231 ,
+	"programName": "Java-oops-inheritance"
+	  }
+	},
+	{
+		"testcaseName": "Admin updates a batch with valid batch ID",
+		"expectedStatus": 200,
+		"endpoint": ":/batches/{batchId}",
+		"contentType": "application/json",
+		"BatchData": {
+		"batchDescription": "Automation Batch",
+		"batchNoOfClasses": 2,
+		"batchStatus": "Active"
+		  }
+		}
+
+
+		
   ],
   
   "PutRequest": [
@@ -466,6 +876,7 @@
 	    "expectedMessage": "deleted"
 	  },
 	  {
+<<<<<<< Updated upstream
 	    "testcaseName": "valid program ID chaining",
 	    "endpoint": "/deletebyprogid/{programId}",
 	    "method": "DELETE",
@@ -589,5 +1000,12 @@
       },
       "expectedStatusCode": 401
     }
+=======
+	      "testcaseName": "Admin deletes a batch with valid batch id",
+	      "endpoint": "/batches/{id}",
+	      "expectedStatusCode": 200,
+	      "expectedMessage": "deleted"
+	    }
+>>>>>>> Stashed changes
   ]
 }

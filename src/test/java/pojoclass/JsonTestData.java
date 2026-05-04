@@ -2,6 +2,8 @@ package pojoclass;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import io.restassured.RestAssured;
+
 //@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class JsonTestData {
@@ -168,6 +170,11 @@ public class JsonTestData {
     public String getExpectedMessage() {
         return expectedMessage;
     }
+
+	public RestAssured getRequestBody() {
+		// TODO Auto-generated method stub
+		return null;
+	}
     
     public Integer getexpectedStatusCode() {
         return expectedStatusCode;

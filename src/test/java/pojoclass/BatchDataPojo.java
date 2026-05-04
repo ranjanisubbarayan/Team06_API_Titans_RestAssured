@@ -36,10 +36,10 @@ public class BatchDataPojo {
         this.batchNoOfClasses = batchNoOfClasses;
     }
     
-    public int getProgramId() {
+    public Integer getProgramId() {
         return programId;
     }
-    public void setProgramId(int programId) {
+    public void setProgramId(Integer programId) {
         this.programId = programId;
     }
 

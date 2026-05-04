@@ -9,6 +9,7 @@ public class ScenarioContext {
 
     public static void set(String key, Object value) {
         data.put(key, value);
+        System.out.println("ScenarioContext Data: " + data);
     }
 
     public static <T> T get(String key, Class<T> type) {
