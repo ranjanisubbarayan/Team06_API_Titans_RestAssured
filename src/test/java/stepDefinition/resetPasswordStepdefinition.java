@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import pojoclass.JsonTestData;
 import pojoclass.TestcaseWrapper;
 import utilities.JsonReader;
+import utilities.Token;
 import pojoclass.ResetPasswordRequest;
 
 
@@ -26,25 +27,64 @@ public class resetPasswordStepdefinition extends Base {
 	   ResetPasswordRequest resetPasswordRequest ;
 	   
 	   private static final Logger log = LoggerFactory.getLogger(resetPasswordStepdefinition.class);
+	   
+	   
+	   @Given("Admin creates POST request with valid credentials for the reset API")
+	   public void admin_creates_post_request_with_valid_credentials_for_the_reset_api() throws IOException {
+		 
+			 TestcaseWrapper wrapper = getTestData();
+			 testData = JsonReader.getTestDataByScenarioName("Reset Password With Valid Token", wrapper.getResetPasswordRequest());
+			 
+			 resetPasswordRequest = testData.getResetPasswordRequest();
+			 request = createRequest();
+
+			 request = request
+			     .header("Content-Type", "application/json")
+			     .header("Authorization", "Bearer " + Token.token)
+			     .body(resetPasswordRequest);
+
+		     
+		     log.info("Admin creates POST request with valid credentials - Postive Scenario");
+	   }
+
+	   @When("Admin sends a HTTPS POST request to the valid login endpoint for the reset API")
+	   public void admin_sends_a_https_post_request_to_the_valid_login_endpoint_for_the_reset_api() {
+			 response = request
+		                .when().log().all()
+		                .post(testData.getEndpoint());
+	   }
+
+	   @Then("Admin receives {int} Created with auto generated token for the reset API")
+	   public void admin_receives_created_with_auto_generated_token_for_the_reset_api(Integer statusCode) {
+		   log.info("Validating the Actual Status Code for the Reset password with Valid credentials: {}", response.getStatusCode());
+			log.info("Validating the Expected Status Code for the Reset password API with Valid Credentials: {}", testData.getexpectedStatusCode());
+			 assertEquals(response.getStatusCode(), statusCode.intValue());
+				log.info(response.asPrettyString());	
+	   }
 	
 
 @Given("Admin creates POST request for {string} reset password API")
 public void admin_creates_post_request_for_reset_password_api(String scenarioName) throws IOException {
 	
-	request = createTokenRequest();
+	request = createTokenRequest(); 
 	
 	TestcaseWrapper wrapper = getTestData();
 
-    testData = JsonReader.getTestDataByScenarioName(scenarioName, wrapper.getResetPasswordRequest()
-    );
-    
+    testData = JsonReader.getTestDataByScenarioName(scenarioName, wrapper.getResetPasswordRequest());
     
 
-    if (scenarioName.equalsIgnoreCase("Reset Password Without Authentication")) {
+   if (scenarioName.equalsIgnoreCase("Reset Password Without Authentication")) {
 
         request = createRequest();
 
-    } else if (scenarioName.equalsIgnoreCase("Reset Password With Invalid Token")) {
+    } else if (scenarioName.equalsIgnoreCase("Reset Password With Empty Token")) {
+
+        request = createRequest()
+                .header("Authorization", "Bearer ");
+        
+    }
+    
+    else if (scenarioName.equalsIgnoreCase("Reset Password With Invalid Token")) {
 
         request = createRequest()
                 .header("Authorization", "Bearer.invalidtoken");
@@ -62,11 +102,7 @@ public void admin_creates_post_request_for_reset_password_api(String scenarioNam
     }
 
 
-    if ("text/plain".equalsIgnoreCase(testData.getContentType())) {
-        request.body(testData.getRawBody());
-    } else if (testData.getResetPasswordRequest() != null) {
-        request.body(testData.getResetPasswordRequest());
-    }
+
 
     log.info("Reset password request created for scenario: {}", scenarioName);
 }
