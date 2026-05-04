@@ -2,6 +2,7 @@ package stepDefinition;
 
 import java.io.IOException;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import pojoclass.JsonTestData;
@@ -19,7 +20,14 @@ public class Hooks extends Base {
 
     private static final Logger log = LoggerFactory.getLogger(Hooks.class);
     
-    @Before(value = "@authToken", order = 0)
+    public static Scenario scenario;
+
+    @Before(order = 0)
+    public void captureScenario(Scenario scenario) {
+        Hooks.scenario = scenario;
+    }
+    
+    @Before(value = "@authToken", order = 1)
     public void generateTokenBeforeScenario() throws IOException {
 
         if (Token.token == null || Token.token.isEmpty()) {

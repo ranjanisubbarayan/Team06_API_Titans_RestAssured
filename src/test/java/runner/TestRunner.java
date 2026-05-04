@@ -14,7 +14,7 @@ import io.cucumber.testng.CucumberOptions;
 				  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 	    		"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 	    		},
-		dryRun = true
+		dryRun = false
 		
 		)
 public class TestRunner extends AbstractTestNGCucumberTests{
