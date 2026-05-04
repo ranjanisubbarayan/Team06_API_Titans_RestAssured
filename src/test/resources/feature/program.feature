@@ -1,5 +1,5 @@
 @ProgramModule
-Feature: Program Module API - Add New Program
+Feature: Program Module API - Get API Create API Update API and delete Program API
 
 Background:
     Given Admin sets Authorization to Bearer Token
