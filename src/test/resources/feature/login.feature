@@ -1,4 +1,4 @@
-Feature: User Sign In API
+Feature: User Sign In and forgot Password API
 
 Background: Admin sets No Auth 
 
