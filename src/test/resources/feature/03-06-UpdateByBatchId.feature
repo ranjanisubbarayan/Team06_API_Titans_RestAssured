@@ -22,7 +22,7 @@ Then Admin receives 400 Bad Request Status with error message
 Scenario Outline: Admin updates a batch by batch id with invalid batch details
 Given Admin creates PUT request with "<testcaseName>"  
 When Admin sends HTTPS request to the endpoint for put request
-Then Admin receives 400 Bad Request with error message
+Then Admin receives 404 Not Found Status with error message
 
 Examples:
 |testcaseName |

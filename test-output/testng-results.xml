@@ -5,7 +5,7 @@
   <suite started-at="2026-05-05T17:00:50 EDT" name="Default suite" finished-at="2026-05-05T17:01:58 EDT" duration-ms="67243">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
     <test started-at="2026-05-05T17:00:50 EDT" name="Default test" finished-at="2026-05-05T17:01:58 EDT" duration-ms="67243">
@@ -621,7 +621,7 @@ at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1431)
 at org.testng.Assert.assertEquals(Assert.java:1461)
 at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
-at ✽.Admin validates GET response for "Get All Programs Without Auth" in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
+at ✽.Admin validates GET response for "Get All Programs Without Auth" in program API(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
@@ -654,7 +654,7 @@ at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1431)
 at org.testng.Assert.assertEquals(Assert.java:1461)
 at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
-at ✽.Admin validates GET response for "Get Program By ID Without Auth" in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
+at ✽.Admin validates GET response for "Get Program By ID Without Auth" in program API(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
@@ -687,7 +687,7 @@ at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1431)
 at org.testng.Assert.assertEquals(Assert.java:1461)
 at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
-at ✽.Admin validates GET response for "Get All Programs With Users Without Auth" in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
+at ✽.Admin validates GET response for "Get All Programs With Users Without Auth" in program API(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
@@ -926,8 +926,8 @@ at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family
             <full-stacktrace>
               <![CDATA[java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: batchId.
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
 at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
 at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
 at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
@@ -935,8 +935,8 @@ at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(Cal
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
 at io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1277)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
@@ -949,8 +949,8 @@ at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoIn
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
 at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1161)
 at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
@@ -984,8 +984,8 @@ at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groov
 at io.restassured.filter.FilterContext$next.call(Unknown Source)
 at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
 at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
@@ -998,8 +998,8 @@ at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoIn
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
 at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
 at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
 at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
@@ -1111,7 +1111,7 @@ at org.testng.Assert.assertEquals(Assert.java:1431)
 at org.testng.Assert.assertEquals(Assert.java:1395)
 at org.testng.Assert.assertEquals(Assert.java:1441)
 at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
-at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-04-GetBatchByBatchName.feature:30)
+at ✽.Admin receives 415 unsupported media type(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-04-GetBatchByBatchName.feature:30)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
@@ -1179,32 +1179,6 @@ at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
@@ -1221,32 +1195,24 @@ at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[expected [404] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+              <![CDATA[java.lang.AssertionError: expected [404] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_not_found_status_with_error_message(BatchStepDefiniton.java:808)
+at ✽.Admin receives 404 Not Found Status with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
@@ -1263,32 +1229,24 @@ at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[expected [404] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+              <![CDATA[java.lang.AssertionError: expected [404] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_not_found_status_with_error_message(BatchStepDefiniton.java:808)
+at ✽.Admin receives 404 Not Found Status with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
@@ -1305,32 +1263,24 @@ at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[expected [404] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+              <![CDATA[java.lang.AssertionError: expected [404] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_not_found_status_with_error_message(BatchStepDefiniton.java:808)
+at ✽.Admin receives 404 Not Found Status with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
@@ -1347,32 +1297,24 @@ at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[expected [404] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+              <![CDATA[java.lang.AssertionError: expected [404] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_not_found_status_with_error_message(BatchStepDefiniton.java:808)
+at ✽.Admin receives 404 Not Found Status with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
@@ -1389,32 +1331,24 @@ at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[expected [404] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+              <![CDATA[java.lang.AssertionError: expected [404] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_not_found_status_with_error_message(BatchStepDefiniton.java:808)
+at ✽.Admin receives 404 Not Found Status with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
@@ -1431,32 +1365,24 @@ at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[expected [404] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+              <![CDATA[java.lang.AssertionError: expected [404] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_not_found_status_with_error_message(BatchStepDefiniton.java:808)
+at ✽.Admin receives 404 Not Found Status with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
@@ -1473,32 +1399,24 @@ at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[expected [404] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+              <![CDATA[java.lang.AssertionError: expected [404] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_not_found_status_with_error_message(BatchStepDefiniton.java:808)
+at ✽.Admin receives 404 Not Found Status with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
@@ -1515,32 +1433,24 @@ at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[expected [404] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+              <![CDATA[java.lang.AssertionError: expected [404] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_not_found_status_with_error_message(BatchStepDefiniton.java:808)
+at ✽.Admin receives 404 Not Found Status with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
@@ -1557,32 +1467,24 @@ at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[expected [404] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("Admin receives {int} Bad Request with error message")
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+              <![CDATA[java.lang.AssertionError: expected [404] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_not_found_status_with_error_message(BatchStepDefiniton.java:808)
+at ✽.Admin receives 404 Not Found Status with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
@@ -1613,7 +1515,7 @@ at org.testng.Assert.assertEquals(Assert.java:1431)
 at org.testng.Assert.assertEquals(Assert.java:1395)
 at org.testng.Assert.assertEquals(Assert.java:1441)
 at stepDefinition.BatchStepDefiniton.admin_receives_a_ok_status_and_the_response_body_contains_the_program_details_corresponding_to_the_provided_program_id(BatchStepDefiniton.java:874)
-at ✽.Admin receives a 200 OK status and the response body contains the program details corresponding to the provided program id(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:43)
+at ✽.Admin receives a 200 OK status and the response body contains the program details corresponding to the provided program id(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:43)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
