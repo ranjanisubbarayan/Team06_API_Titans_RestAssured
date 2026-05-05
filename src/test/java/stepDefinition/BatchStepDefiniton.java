@@ -101,13 +101,6 @@ public class BatchStepDefiniton extends Base {
 	            wrapper.getTests()
 	    );
 		batchData = testData.getBatchData();
-//		int programId = ScenarioContext.get("programId", Integer.class);
-	    String programName = ScenarioContext.get("programName", String.class);
-	    
-//	    batchData.setProgramId(programId);
-	    batchData.setProgramName(programName);
-	    String randomSuffix = RandomLetters.randomNumber(5);
-		batchData.setBatchName(programName + "_" + randomSuffix);
 	    request.contentType(testData.getContentType())
 		.body(batchData);
 	    
@@ -358,11 +351,11 @@ public class BatchStepDefiniton extends Base {
 	    
 		log.info(response.asPrettyString());
     	assertEquals(response.getStatusCode(), statusCode.intValue());
-    	int status = response.getStatusCode();
-    	String error = response.jsonPath().getString("error");
-
-    	System.out.println("Status: " + status);
-    	System.out.println("Error: " + error);
+//    	int status = response.getStatusCode();
+//    	String error = response.jsonPath().getString("error");
+//
+//    	System.out.println("Status: " + status);
+//    	System.out.println("Error: " + error);
 	}
 
 	@Given("Admin creates GET request with valid request body")
@@ -413,9 +406,7 @@ public class BatchStepDefiniton extends Base {
 //	            .header("Content-Type", testData.getContentType())
 //	            .body(loginRequest);
 		testData = JsonReader.getTestDataByScenarioName("No Auth Login", wrapper.getTests());
-		request = given()
-	            .header("Content-Type", "application/json")
-	            .body("{}");
+    	request = RestAssured.given(); 
 	    
 	}
 	
@@ -437,6 +428,10 @@ public class BatchStepDefiniton extends Base {
 		request = given().header("Content-Type", testData.getContentType())
 		.body(batchData);
 	    
+	}
+	@When("Admin sends HTTPS request to the endpoint with no auth")
+	public void admin_sends_https_request_to_the_endpoint_with_no_auth() {
+		response = request.when().post(testData.getEndpoint());
 	}
 
 	@Then("Admin receives {int} Unauthorized")
@@ -479,17 +474,25 @@ public class BatchStepDefiniton extends Base {
     	assertEquals(response.getStatusCode(), statusCode.intValue());
   
 	}
+	
+	@When("Admin sends HTTPS request to the invalid endpoint for get")
+	public void admin_sends_https_request_to_the_invalid_endpoint_for_get() {
+	    
+		response = request
+                .when()
+                .get(testData.getEndpoint());
+	}
 
 	@Then("Admin receives {int} Not Found with error message")
 	public void admin_receives_not_found_with_error_message(Integer statusCode) {
 	   
 		log.info(response.asPrettyString());
     	assertEquals(response.getStatusCode(), statusCode.intValue());
-    	int status = response.getStatusCode();
-    	String error = response.jsonPath().getString("error");
-
-    	System.out.println("Status: " + status);
-    	System.out.println("Error: " + error);
+//    	int status = response.getStatusCode();
+//    	String error = response.jsonPath().getString("error");
+//
+//    	System.out.println("Status: " + status);
+//    	System.out.println("Error: " + error);
 	}
 
 	@Given("Admin creates POST request")
@@ -619,15 +622,24 @@ public class BatchStepDefiniton extends Base {
 	public void admin_creates_get_request_with_invalid_content_type_batch_by_batch_id() {
 	    
 		TestcaseWrapper wrapper = getTestData();
-    	testData = JsonReader.getTestDataByScenarioName(
-		        Hooks.scenario.getName(),
-    	        wrapper.getGetRequest()
-    	);  
-    	String token = ScenarioContext.get("token", String.class);
+		testData = JsonReader.getTestDataByScenarioName(
+	            "invalid content type", 
+	            wrapper.getTests()
+	    );
+		batchData = testData.getBatchData();
+		String batchId = ScenarioContext.get("createdBatchId", String.class);
+	 	String endpoint = "/batches/" + batchId;
+	 	ScenarioContext.set("endpoint", endpoint);
+	    request.contentType(testData.getContentType());
 
-        request = given()
-                .header("Authorization", "Bearer " + token)  
-                .header("Content-Type", "text/plain");
+	    if ("text/plain".equalsIgnoreCase(testData.getContentType())) {
+	        request.body(testData.getRawBody()); 
+
+	    }
+	    else{
+	    	request.contentType("application/json")
+            .body(batchData);
+	    };
 	}
 
 	@When("Admin sends HTTPS request to the endpoint for invalid content method")
@@ -768,128 +780,174 @@ public class BatchStepDefiniton extends Base {
 	@Given("Admin creates PUT request with invalid BatchId")
 	public void admin_creates_put_request_with_invalid_batch_id() {
 	    
+		TestcaseWrapper wrapper = getTestData();
+		testData = JsonReader.getTestDataByScenarioName(
+		        Hooks.scenario.getName(),
+		        wrapper.getTests()
+		);
+		batchData = testData.getBatchData();
+		int programId = ScenarioContext.get("programId", Integer.class);
+	    String programName1 = ScenarioContext.get("programName", String.class);
 	    
+	    batchData.setProgramId(programId);
+	    batchData.setProgramName(programName1);
+	    System.out.println(programName1 + ", programid:" + programId);
+	    String randomSuffix = RandomLetters.randomNumber(5);
+		batchData.setBatchName(programName1 + "_" + randomSuffix);
+    	int invalidBatchId = 1234;
+   	 	String endpoint = "/batches/" + invalidBatchId;
+   	 	ScenarioContext.set("endpoint", endpoint);
+   	 	request.contentType(testData.getContentType())
+		.body(batchData);
 	}
 
 	@Then("Admin receives {int} Not Found Status with error message")
-	public void admin_receives_not_found_status_with_error_message(Integer int1) {
+	public void admin_receives_not_found_status_with_error_message(Integer statusCode) {
 	    
-	    
+		log.info(response.asPrettyString());
+    	assertEquals(response.getStatusCode(), statusCode.intValue());
+    	int status = response.getStatusCode();
+    	System.out.println("Status: " + status);
 	}
 
 	@Given("Admin creates PUT request with missing mandatory fields")
 	public void admin_creates_put_request_with_missing_mandatory_fields() {
 	    
-	    
+		TestcaseWrapper wrapper = getTestData();
+		testData = JsonReader.getTestDataByScenarioName(
+		        Hooks.scenario.getName(),
+		        wrapper.getTests()
+		);
+		batchData = testData.getBatchData();
+		int invalidBatchId = 1234;
+   	 	String endpoint = "/batches/" + invalidBatchId;
+   	 	ScenarioContext.set("endpoint", endpoint);
+		request.contentType(testData.getContentType())
+		.body(batchData);
 	}
 
 	@Then("Admin receives {int} Bad Request Status with error message")
-	public void admin_receives_bad_request_status_with_error_message(Integer int1) {
+	public void admin_receives_bad_request_status_with_error_message(Integer statusCode) {
 	    
-	    
+		log.info(response.asPrettyString());
+    	assertEquals(response.getStatusCode(), statusCode.intValue());
+    	int status = response.getStatusCode();
+    	System.out.println("Status: " + status);
 	}
-
-	@Given("Admin creates PUT request with batch name that is already exist in the system")
-	public void admin_creates_put_request_with_batch_name_that_is_already_exist_in_the_system() {
+	
+	@Given("Admin creates PUT request with {string}")
+	public void admin_creates_put_request_with(String testcaseName) {
 	    
-	    
-	}
-
-	@Then("Admin receives {int} Bad Request with error message")
-	public void admin_receives_bad_request_with_error_message(Integer int1) {
-	    
-	    
-	}
-
-	@Given("Admin creates PUT request with invalid batch name format")
-	public void admin_creates_put_request_with_invalid_batch_name_format() {
-	    
-	    
-	}
-
-	@Given("Admin creates PUT request with batch name length more than {int} characters including prefixed program name")
-	public void admin_creates_put_request_with_batch_name_length_more_than_characters_including_prefixed_program_name(Integer int1) {
-	    
-	    
-	}
-
-	@Given("Admin creates PUT request with batch name length less than {int} characters including prefixed program name")
-	public void admin_creates_put_request_with_batch_name_length_less_than_characters_including_prefixed_program_name(Integer int1) {
-	    
-	    
-	}
-
-	@Given("Admin creates a PUT request with invalid batch description")
-	public void admin_creates_a_put_request_with_invalid_batch_description() {
-	    
-	    
-	}
-
-	@Given("Admin creates a PUT request with invalid batch status")
-	public void admin_creates_a_put_request_with_invalid_batch_status() {
-	    
-	    
-	}
-
-	@Given("Admin creates a PUT request with invalid batch number of classes")
-	public void admin_creates_a_put_request_with_invalid_batch_number_of_classes() {
-	    
-	    
-	}
-
-	@Given("Admin creates a PUT request with invalid program id")
-	public void admin_creates_a_put_request_with_invalid_program_id() {
-	    
-	    
-	}
-
-	@Given("Admin creates a PUT request with special characters in program name")
-	public void admin_creates_a_put_request_with_special_characters_in_program_name() {
-	    
-	    
-	}
-
-	@Given("Admin creates a PUT request with numbers in program name")
-	public void admin_creates_a_put_request_with_numbers_in_program_name() {
-	    
-	    
+		TestcaseWrapper wrapper = getTestData();
+		testData = JsonReader.getTestDataByScenarioName(
+				testcaseName,
+		        wrapper.getTests()
+		);
+		batchData = testData.getBatchData();
+		String batchId = ScenarioContext.get("createdBatchId", String.class);
+   	 	String endpoint = "/batches/" + batchId;
+   	 	ScenarioContext.set("endpoint", endpoint);
+   	 	request.contentType(testData.getContentType())
+		.body(batchData);
 	}
 
 	@Given("Admin creates a PUT request with program name that does not match the associated program id")
 	public void admin_creates_a_put_request_with_program_name_that_does_not_match_the_associated_program_id() {
 	    
-	    
+		TestcaseWrapper wrapper = getTestData();
+		testData = JsonReader.getTestDataByScenarioName(
+		        Hooks.scenario.getName(),
+		        wrapper.getTests()
+		);
+		batchData = testData.getBatchData();
+		String batchId = ScenarioContext.get("createdBatchId", String.class);
+   	 	String endpoint = "/batches/" + batchId;
+   	 	ScenarioContext.set("endpoint", endpoint);
+   	 	request.contentType(testData.getContentType())
+		.body(batchData);
 	}
 
 	@Then("Admin receives a {int} OK status and the response body contains the program details corresponding to the provided program id")
-	public void admin_receives_a_ok_status_and_the_response_body_contains_the_program_details_corresponding_to_the_provided_program_id(Integer int1) {
+	public void admin_receives_a_ok_status_and_the_response_body_contains_the_program_details_corresponding_to_the_provided_program_id(Integer statusCode) {
 	    
-	    
+		log.info(response.asPrettyString());
+    	assertEquals(response.getStatusCode(), statusCode.intValue());
+    	int status = response.getStatusCode();
+    	System.out.println("Status: " + status);
 	}
 
 	@Given("Admin creates PUT request with inactive program")
 	public void admin_creates_put_request_with_inactive_program() {
 	    
-	    
+		TestcaseWrapper wrapper = getTestData();
+		testData = JsonReader.getTestDataByScenarioName(
+		        Hooks.scenario.getName(),
+		        wrapper.getTests()
+		);
+		batchData = testData.getBatchData();
+		String batchId = ScenarioContext.get("createdBatchId", String.class);
+   	 	String endpoint = "/batches/" + batchId;
+   	 	ScenarioContext.set("endpoint", endpoint);
+		request.contentType(testData.getContentType())
+		.body(batchData);
 	}
 
 	@Given("Admin creates PUT request with valid request body")
 	public void admin_creates_put_request_with_valid_request_body() {
 	    
+		TestcaseWrapper wrapper = getTestData();
+		testData = JsonReader.getTestDataByScenarioName(
+		        Hooks.scenario.getName(),
+		        wrapper.getTests()
+		);
+		batchData = testData.getBatchData();
+//		String batchId = ScenarioContext.get("createdBatchId", String.class);
+//   	 	String endpoint = "/batches/" + batchId;
+//   	 	ScenarioContext.set("endpoint", endpoint);
+		request.contentType(testData.getContentType())
+		.body(batchData);
 	    
 	}
 
 	@Then("Admin receives {int} not found")
-	public void admin_receives_not_found(Integer int1) {
+	public void admin_receives_not_found(Integer statusCode) {
 	    
-	    
+		log.info(response.asPrettyString());
+    	assertEquals(response.getStatusCode(), statusCode.intValue());
+    	int status = response.getStatusCode();
+    	System.out.println("Status: " + status);
 	}
 
 	@Given("Admin creates PUT request with invalid content type")
 	public void admin_creates_put_request_with_invalid_content_type() {
 	    
+		TestcaseWrapper wrapper = getTestData();
+		testData = JsonReader.getTestDataByScenarioName(
+	            "invalid content type", 
+	            wrapper.getTests()
+	    );
+		batchData = testData.getBatchData();
+		String batchId = ScenarioContext.get("createdBatchId", String.class);
+	 	String endpoint = "/batches/" + batchId;
+	 	ScenarioContext.set("endpoint", endpoint);
+	    request.contentType(testData.getContentType());
+
+	    if ("text/plain".equalsIgnoreCase(testData.getContentType())) {
+	        request.body(testData.getRawBody()); 
+
+	    }
 	    
 	}
+	
+	@When("Admin sends HTTPS request to the endpoint for invalid content type for put")
+	public void admin_sends_https_request_to_the_endpoint_for_invalid_content_type_for_put() {
+	   
+		String endpoint = ScenarioContext.get("endpoint", String.class);
+		response = request.when().put(endpoint);
+		System.out.println("Reponse Body:\n" +response.getBody().asString());
+
+	}
+
 
 	
 //-----------------------------------Delete batch by batchID--------------------------------------------------
@@ -932,5 +990,83 @@ public class BatchStepDefiniton extends Base {
 //    	System.out.println("Status: " + status);
 //    	System.out.println("Error: " + error);
 	}
+	
+	@Given("Admin creates DELETE request with invalid BatchId")
+	public void admin_creates_delete_request_with_invalid_batch_id() {
+	    
+		TestcaseWrapper wrapper = getTestData();
+
+    	testData = JsonReader.getTestDataByScenarioName(
+		        Hooks.scenario.getName(),
+    	        wrapper.getDeleteRequest()
+    	);
+    	 int invalidBatchId = 23;
+    	 String endpoint = "/batches/" + invalidBatchId;
+    	 ScenarioContext.set("endpoint", endpoint);
+	   
+	}
+
+	@When("Admin sends HTTPS request to the endpoint for delete")
+	public void admin_sends_https_request_to_the_endpoint_for_delete() {
+	    
+		String endpoint = ScenarioContext.get("endpoint", String.class);
+		response = request.when().delete(endpoint);
+	}
+	
+	@Given("Admin creates DELETE request with valid BatchId for invalid endpoint")
+	public void admin_creates_delete_request_with_valid_batch_id_for_invalid_endpoint() {
+	    
+		TestcaseWrapper wrapper = getTestData();
+
+    	testData = JsonReader.getTestDataByScenarioName(
+		        Hooks.scenario.getName(),
+    	        wrapper.getDeleteRequest()
+    	);
+    	 String batchId = ScenarioContext.get("createdBatchId", String.class);
+    	 String endpoint = "/batche/" + batchId;
+    	 ScenarioContext.set("endpoint", endpoint);
+	}
+
+	@When("Admin sends HTTPS request to the invalid endpoint for delete")
+	public void admin_sends_https_request_to_the_invalid_endpoint_for_delete() {
+	    
+		String endpoint = ScenarioContext.get("endpoint", String.class);
+		response = request.when().delete(endpoint);
+	}
+
+	@Given("Admin creates POST request with valid BatchId")
+	public void admin_creates_post_request_with_valid_batch_id() {
+	    
+		TestcaseWrapper wrapper = getTestData();
+
+    	testData = JsonReader.getTestDataByScenarioName(
+		        Hooks.scenario.getName(),
+    	        wrapper.getDeleteRequest()
+    	);
+    	 String batchId = ScenarioContext.get("createdBatchId", String.class);
+    	 String endpoint = "/batches/" + batchId;
+    	 ScenarioContext.set("endpoint", endpoint);
+	}
+
+	@When("Admin sends a POST HTTPS request to the valid endpoint")
+	public void admin_sends_a_post_https_request_to_the_valid_endpoint() {
+	    
+		String endpoint = ScenarioContext.get("endpoint", String.class);
+		response = request.when().post(endpoint);
+	   
+	}
+
+	@Given("Admin creates DELETE request with invalid content type")
+	public void admin_creates_delete_request_with_invalid_content_type() {
+	    
+	   
+	}
+
+	@When("Admin sends HTTPS request to the valid endpoint")
+	public void admin_sends_https_request_to_the_valid_endpoint() {
+	    
+	   
+	}
+
 
 }

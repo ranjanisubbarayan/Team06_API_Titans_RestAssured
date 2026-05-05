@@ -1,6 +1,6 @@
 Feature: User Sign In and forgot Password API
 
-Background: Admin sets No Auth 
+#Background: Admin sets No Auth 
 
 @login_ValidCredential
 
@@ -9,7 +9,7 @@ Background: Admin sets No Auth
     When Admin sends a HTTPS POST request to the valid login endpoint for the login API
     Then Admin receives 200 Created with auto generated token for the login API
     
-    
+   
 @NegativeLoginAPI    
   
 Scenario Outline: Validate Negative login API scenarios

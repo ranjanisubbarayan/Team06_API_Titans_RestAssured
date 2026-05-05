@@ -133,7 +133,6 @@ public class ProgramStepDefinition extends Base {
      
     	log.info("Response Body:\n{}", response.asString());
     	
-<<<<<<< Updated upstream
 		if (response.getStatusCode() == testData.getexpectedStatusCode()) {
 			int programId = response.jsonPath().getInt("programId");
 			String programName = response.jsonPath().getString("programName");
@@ -145,16 +144,14 @@ public class ProgramStepDefinition extends Base {
     	log.info("admin received the response body for the add program module with the Actual Status Code: {}", response.getStatusCode());
     	
     	log.info("admin received the response body for the add program module with the Expected Status Code: {}", testData.getexpectedStatusCode());
-=======
 //		if (response.getStatusCode() == statusCode.intValue()) {
 		int programId = response.jsonPath().getInt("programId");
 		String programName = response.jsonPath().getString("programName");
 		ScenarioContext.set("programId", programId);
 		ScenarioContext.set("programName", programName);
 //		}
-    	assertEquals(response.getStatusCode(), statusCode.intValue());
+//    	assertEquals(response.getStatusCode(), statusCode.intValue());
     	log.info("admin received the response body for the add program module with the Status Code: {}", response.getStatusCode());
->>>>>>> Stashed changes
     }
     
     
