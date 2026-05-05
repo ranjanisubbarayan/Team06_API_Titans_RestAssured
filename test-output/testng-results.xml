@@ -1,1035 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="63" passed="63" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-03T20:24:02 EDT" name="Default suite" finished-at="2026-05-03T20:24:09 EDT" duration-ms="6541">
+  <suite started-at="2026-05-04T22:30:56 EDT" name="Default suite" finished-at="2026-05-04T22:31:21 EDT" duration-ms="24230">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-03T20:24:02 EDT" name="Default test" finished-at="2026-05-03T20:24:09 EDT" duration-ms="6541">
+    <test started-at="2026-05-04T22:30:56 EDT" name="Default test" finished-at="2026-05-04T22:31:21 EDT" duration-ms="24230">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:02 EDT" name="setUpClass" finished-at="2026-05-03T20:24:04 EDT" duration-ms="1413" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-04T22:30:56 EDT" name="setUpClass" finished-at="2026-05-04T22:30:59 EDT" duration-ms="2601" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@bfe47a8]]>
+                <![CDATA[org.testng.TestRunner@1d4531fa]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="452" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-04T22:30:59 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-04T22:31:11 EDT" duration-ms="11781" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin creates batch with both mandatory and optional fields"]]>
+                <![CDATA["Admin retrieves all batches with valid endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Add New Batch [Post Operation]"]]>
+                <![CDATA["GET All Batches[Get Operation]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="36" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-04T22:31:11 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-04T22:31:11 EDT" duration-ms="445" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin generates token with valid credential for the login API"]]>
+                <![CDATA["Admin retrieves all batches with invalid endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User Sign In API"]]>
+                <![CDATA["GET All Batches[Get Operation]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="44" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-04T22:31:11 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-04T22:31:12 EDT" duration-ms="386" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
+                <![CDATA["Admin retrieves all batches with invalid method"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User Sign In API"]]>
+                <![CDATA["GET All Batches[Get Operation]"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [405] but found [400]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [405] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
+at ✽.Admin receives 405 method not allowed(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-01GetAllBatches.feature:20)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="26" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-04T22:31:12 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-04T22:31:14 EDT" duration-ms="1900" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
+                <![CDATA["Admin retrieves all batches with invalid content type"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User Sign In API"]]>
+                <![CDATA["GET All Batches[Get Operation]"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [415] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [415] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
+at ✽.Admin receives 415 unsupported media type(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-01GetAllBatches.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="17" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="19" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="13" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="13" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="14" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="12" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Negative login API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Forgot Password Confirm email LoginAPI scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Forgot Password Confirm email LoginAPI scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Forgot Password Confirm email LoginAPI scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Forgot Password Confirm email LoginAPI scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="8" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Forgot Password Confirm email LoginAPI scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Forgot Password Confirm email LoginAPI scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Forgot Password Confirm email LoginAPI scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Forgot Password Confirm email LoginAPI scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Sign In API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="17" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Logout API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Logout API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="14" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Logout API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Logout API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="11" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Logout API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Logout API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:04 EDT" duration-ms="11" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Logout API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Logout API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="14" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Logout API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Logout API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="11" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Logout API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Logout API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="22" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin retrieves all programs with valid endpoint"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="13" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin creates a program with valid request body and authorization"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="19" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="12" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="12" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="11" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="11" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Update Program API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="13" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Update Program API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Update Program API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Update Program API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Update Program API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Delete Program By ProgramID"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Delete Program By ProgramID API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Delete Program By ProgramID API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="12" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Delete Program By ProgramID API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Delete Program By ProgramID API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Program Module API - Add New Program"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="8" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Get all Program without Auth"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Get all Program without Auth"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Program GET API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Get all Program without Auth"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="11" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Admin generates token with valid credential for the reset API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Reset Password API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Reset Password API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Reset Password API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Reset Password API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Reset Password API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Reset Password API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Reset Password API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Reset Password API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Reset Password API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Reset Password API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Reset Password API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Reset Password API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Reset Password API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-03T20:24:05 EDT" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Reset Password API scenarios"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Reset Password API"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-03T20:24:05 EDT" name="tearDownClass" finished-at="2026-05-03T20:24:09 EDT" duration-ms="3785" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-04T22:31:14 EDT" name="tearDownClass" finished-at="2026-05-04T22:31:21 EDT" duration-ms="6958" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

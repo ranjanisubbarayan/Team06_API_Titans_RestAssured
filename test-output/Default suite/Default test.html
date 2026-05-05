@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>63/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 03 20:24:02 EDT 2026</td>
+<td>Started on:</td><td>Mon May 04 22:30:56 EDT 2026</td>
 </tr>
-<tr><td>Total time:</td><td>6 seconds (6541 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24230 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,67 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with invalid content type", "GET All Batches[Get Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [415] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
+	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-01GetAllBatches.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace440159038", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace440159038'><pre>java.lang.AssertionError: expected [415] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
+	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-01GetAllBatches.feature:25)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestRunner@2663e964</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with invalid method", "GET All Batches[Get Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [405] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
+	at ✽.Admin receives 405 method not allowed(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-01GetAllBatches.feature:20)
+</pre></div><a href='#' onClick='toggleBox("stack-trace555591232", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace555591232'><pre>java.lang.AssertionError: expected [405] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
+	at ✽.Admin receives 405 method not allowed(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-01GetAllBatches.feature:20)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@2663e964</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,320 +137,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Add New Program"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with invalid endpoint", "GET All Batches[Get Operation]"</td>
 <td></td>
 <td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
+<td>runner.TestRunner@2663e964</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Add New Program"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with valid endpoint", "GET All Batches[Get Operation]"</td>
 <td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Get all Program without Auth"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Get all Program without Auth"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin generates token with valid credential for the reset API", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all programs with valid endpoint", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates a program with valid request body and authorization", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin generates token with valid credential for the login API", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Get all Program without Auth"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with both mandatory and optional fields", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Program Module API - Add New Program"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
+<td>11</td>
+<td>runner.TestRunner@2663e964</td></tr>
 </table><p>
 </body>
 </html>

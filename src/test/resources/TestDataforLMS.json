@@ -262,7 +262,6 @@
       "expectedStatusCode": 200
     },
 	{
-<<<<<<< Updated upstream
 	   "testcaseName": "Logout Successfully",
 	   "method": "GET",
 	   "endpoint": "/logoutlms",
@@ -377,8 +376,8 @@
 	    "method": "GET",
 	    "endpoint": "/allProgramsWithUsers",
 	    "expectedStatusCode": 401
-	  }
-=======
+	  },
+	  {
       "testcaseName": "Admin retrieves all batches with valid endpoint",
       "endpoint": "/batches",
       "expectedStatusCode": 200
@@ -478,7 +477,7 @@
       "endpoint": "/batches/program/1234",
       "expectedStatusCode": 415
 	}
->>>>>>> Stashed changes
+
   ],
 
   "Tests": [
@@ -506,8 +505,8 @@
         "batchName": "Teamsix_01",
         "batchNoOfClasses": 2,
         "batchStatus": "Active",
-        "programId": 3179,
-        "programName": "Teamsix-zHGVH"
+        "programId": 4679,
+        "programName": "Teamsix"
       }
     },
 	{
@@ -743,19 +742,12 @@
   }
 },
 {
-"testcaseName": "Admin creates batch with invalid content type",
-"expectedStatus": 415,
-"endpoint": "/batches",
-"contentType": "text/plain",
-"BatchData": {
-"batchDescription": "Automation Batch",
-"batchName": "Java-oops-inheritance_01",
-"batchNoOfClasses": 2,
-"batchStatus": "Active",
-"programId": 16231 ,
-"programName": "Java-oops-inheritance"
-  }
-},
+      "testcaseName": "invalid content type",
+      "expectedStatus": 415,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "text/plain",
+	  "rawBody": "{ \"batchDescription\": \"API Automation Batch\", \"batchName\": \"Teamsix-DTesA_61684\", \"batchNoOfClasses\": 3, \"batchStatus\": \"Active\", \"programId\": 4044, \"programName\": \"Teamsix-DTesA\" }"
+	  },
 {
 "testcaseName": "Admin creates batch with invalid method",
 "expectedStatus": 405,
@@ -775,6 +767,19 @@
   "endpoint": "/login",
   "contentType": "application/json",
   "loginRequest": {}
+},
+{
+  "testcaseName": "Admin creates a batch with without authorization",
+  "endpoint": "/batches",
+  "contentType": "application/json",
+  "BatchData": {
+  	"batchDescription": "Automation Batch",
+  	"batchName": "Java-oops-inheritance_01",
+  	"batchNoOfClasses": 2,
+  	"batchStatus": "Active",
+  	"programId": 16231 ,
+  	"programName": "Java-oops-inheritance"
+  	  }
 },
 	{
 	"testcaseName": "Admin creates a batch with without authorization.",
@@ -800,9 +805,237 @@
 		"batchNoOfClasses": 2,
 		"batchStatus": "Active"
 		  }
-		}
-
-
+		},
+{
+	"testcaseName": "Admin updates a batch with invalid batch ID",
+	"expectedStatus": 404,
+	"endpoint": "/batches/{batchId}",
+	"contentType": "application/json",
+	"BatchData": {
+	"batchDescription": "Automation Batch",
+	"batchNoOfClasses": 2,
+	"batchStatus": "Active"
+	  }
+	},
+	{
+      "testcaseName": "Admin updates a batch by batch id with missing mandatory fields in request body",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "Automation Batch",
+        "batchName": "",
+        "batchNoOfClasses": null,
+        "batchStatus": "",
+        "programId": null ,
+        "programName": "Teamsix-zHGVH"
+      }
+    },
+	{
+      "testcaseName": "batch name that is already exist in the system",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-bfjgA_37991",
+        "batchNoOfClasses": 3,
+        "batchStatus": "Active",
+        "programId": 4525 ,
+        "programName": "Teamsix-bfjgA"
+      }
+    },
+	{
+      "testcaseName": "invalid batch name format",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-bfjgA-37991",
+        "batchNoOfClasses": 3,
+        "batchStatus": "Active",
+        "programId": 4525 ,
+        "programName": "Teamsix-bfjgA"
+      }
+    },
+	{
+      "testcaseName": "batch name length more than 28 characters",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-bfjgA_3799143434343434343434",
+        "batchNoOfClasses": 3,
+        "batchStatus": "Active",
+        "programId": 4525 ,
+        "programName": "Teamsix-bfjgA"
+      }
+    },
+	{
+      "testcaseName": "batch name length less than 6 characters",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Team",
+        "batchNoOfClasses": 3,
+        "batchStatus": "Active",
+        "programId": 4525 ,
+        "programName": "Teamsix-bfjgA"
+      }
+    },
+	{
+      "testcaseName": "invalid batch description",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "2354758",
+        "batchName": "Teamsix-bfjgA-37991",
+        "batchNoOfClasses": 3,
+        "batchStatus": "Active",
+        "programId": 4525 ,
+        "programName": "Teamsix-bfjgA"
+      }
+    },
+	{
+      "testcaseName": "invalid batch status",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-bfjgA-37991",
+        "batchNoOfClasses": 3,
+        "batchStatus": "3456",
+        "programId": 4525 ,
+        "programName": "Teamsix-bfjgA"
+      }
+    },
+	{
+      "testcaseName": "invalid batch number of classes",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-bfjgA-37991",
+        "batchNoOfClasses": 0,
+        "batchStatus": "3456",
+        "programId": 4525 ,
+        "programName": "Teamsix-bfjgA"
+      }
+    },
+	{
+      "testcaseName": "invalid program id",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-bfjgA-37991",
+        "batchNoOfClasses": 0,
+        "batchStatus": "Active",
+        "programId": 1234 ,
+        "programName": "Teamsix-bfjgA"
+      }
+    },
+	{
+      "testcaseName": "special characters in program name",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-bfjgA-37991",
+        "batchNoOfClasses": 0,
+        "batchStatus": "Active",
+        "programId": 4525 ,
+        "programName": "%$#^&&"
+      }
+    },
+	{
+      "testcaseName": "numbers in program name",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-bfjgA-37991",
+        "batchNoOfClasses": 0,
+        "batchStatus": "Active",
+        "programId": 4525 ,
+        "programName": "123456"
+      }
+    },
+	{
+      "testcaseName": "Admin updates a batch by batch id with a program name that does not match the associated program id",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-bfjgA-37991",
+        "batchNoOfClasses": 0,
+        "batchStatus": "Active",
+        "programId": 4525 ,
+        "programName": "Teamsix"
+      }
+    },
+	{
+      "testcaseName": "Admin updates a batch by batch id with inactive program",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-DTesA_61684",
+        "batchNoOfClasses": 3,
+        "batchStatus": "Active",
+        "programId": 4044 ,
+        "programName": "Teamsix-DTesA"
+      }
+    },
+	{
+      "testcaseName": "Admin updates a batch by batch id with invalid endpoint",
+      "expectedStatus": 400,
+      "endpoint": "/batches/",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-DTesA_61684",
+        "batchNoOfClasses": 3,
+        "batchStatus": "Active",
+        "programId": 4044 ,
+        "programName": "Teamsix-DTesA"
+      }
+    },
+	{
+      "testcaseName": "Admin updates a batch by batch id with invalid method",
+      "expectedStatus": 400,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "application/json",
+      "BatchData": {
+        "batchDescription": "API Automation Batch",
+        "batchName": "Teamsix-DTesA_61684",
+        "batchNoOfClasses": 3,
+        "batchStatus": "Active",
+        "programId": 4044 ,
+        "programName": "Teamsix-DTesA"
+      }
+    },
+	{
+      "testcaseName": "invalid content type",
+      "expectedStatus": 415,
+      "endpoint": "/batches/{batchId}",
+      "contentType": "text/plain",
+	  "rawBody": "{ \"batchDescription\": \"API Automation Batch\", \"batchName\": \"Teamsix-DTesA_61684\", \"batchNoOfClasses\": 3, \"batchStatus\": \"Active\", \"programId\": 4044, \"programName\": \"Teamsix-DTesA\" }"
+	  }
+	  
+    
 		
   ],
   
@@ -876,7 +1109,6 @@
 	    "expectedMessage": "deleted"
 	  },
 	  {
-<<<<<<< Updated upstream
 	    "testcaseName": "valid program ID chaining",
 	    "endpoint": "/deletebyprogid/{programId}",
 	    "method": "DELETE",
@@ -901,7 +1133,31 @@
 	      "method": "POST",
 	      "endpoint": "/deletebyprogid/{programId}",
 	      "expectedStatusCode": 405
-	    }
+	    },
+		{
+  	      "testcaseName": "Admin deletes a batch with valid batch id",
+  	      "endpoint": "/batches/{id}",
+  	      "expectedStatusCode": 200,
+  	      "expectedMessage": "deleted"
+  	    },
+  		{
+  	      "testcaseName": "Admin deletes a batch with invalid batch id",
+  	      "endpoint": "/batches/{id}",
+  	      "expectedStatusCode": 404,
+  	      "expectedMessage": "deleted"
+  	    },
+		{
+  	      "testcaseName": "Admin deletes a batch by batch id with invalid endpoint",
+  	      "endpoint": "/batche/{id}",
+  	      "expectedStatusCode": 404,
+  	      "expectedMessage": "deleted"
+  	    },
+		{
+  	      "testcaseName": "Admin deletes a batch by batch id with invalid method",
+  	      "endpoint": "/batches/{id}",
+  	      "expectedStatusCode": 415,
+  	      "expectedMessage": "deleted"
+  	    }
   ],
   "ResetPasswordRequest": [
     {
@@ -1000,12 +1256,7 @@
       },
       "expectedStatusCode": 401
     }
-=======
-	      "testcaseName": "Admin deletes a batch with valid batch id",
-	      "endpoint": "/batches/{id}",
-	      "expectedStatusCode": 200,
-	      "expectedMessage": "deleted"
-	    }
->>>>>>> Stashed changes
+	
+
   ]
 }
