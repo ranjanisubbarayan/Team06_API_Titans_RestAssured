@@ -6,12 +6,8 @@
       <class name="runner.TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="66 69 70 71 72 76 77 81 82 85 86 87 88 89 90 91 92 93 94 95 96 98 100 40 104 41 42 45 46 47 48 50 119 120"/>
           <include name="tearDownClass"/>
-<<<<<<< Updated upstream
-=======
-          <include name="runScenario" invocation-numbers="0 1 3 4 5 6 7 8 9 10 11 12 13 14 16"/>
->>>>>>> Stashed changes
+          <include name="runScenario" invocation-numbers="66 69 70 71 72 73 77 78 82 83 87 88 89 90 91 92 93 94 95 96 97 40 104 41 42 45 46 47 48 50 119 120"/>
         </methods>
       </class> <!-- runner.TestRunner -->
     </classes>

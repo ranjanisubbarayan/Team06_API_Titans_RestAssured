@@ -55,7 +55,7 @@ public class BatchStepDefiniton extends Base {
 	            wrapper.getTests()
 	    );
 		batchData = testData.getBatchData();
-		int programId = ScenarioContext.get("programId", Integer.class);
+		Integer programId = ScenarioContext.get("programId", Integer.class);
 	    String programName1 = ScenarioContext.get("programName", String.class);
 	    
 	    batchData.setProgramId(programId);
@@ -916,6 +916,14 @@ public class BatchStepDefiniton extends Base {
     	assertEquals(response.getStatusCode(), statusCode.intValue());
     	int status = response.getStatusCode();
     	System.out.println("Status: " + status);
+	}
+	
+	@When("Admin sends POST HTTPS request to the endpoint for invalid method")
+	public void admin_sends_post_https_request_to_the_endpoint_for_invalid_method() {
+	    
+		String endpoint = ScenarioContext.get("endpoint", String.class);
+		response = request.when().post(endpoint);
+		System.out.println("Reponse Body:\n" +response.getBody().asString());
 	}
 
 	@Given("Admin creates PUT request with invalid content type")
