@@ -8,7 +8,10 @@ Feature: User Sign In and forgot Password API
     Given Admin creates POST request with valid credentials for the login API
     When Admin sends a HTTPS POST request to the valid login endpoint for the login API
     Then Admin receives 200 Created with auto generated token for the login API
-    
+    Then Admin Validates response body matches JSON schema in Login API
+    Then Admin validates Login API response headers
+    Then Admin validates Login API response time
+    Then Admin validates Login API response all
    
 @NegativeLoginAPI    
   
@@ -16,6 +19,11 @@ Scenario Outline: Validate Negative login API scenarios
   Given Admin creates POST request for "<scenarioName>" for the login API
   When Admin sends request to the valid endpoint for the login API
   Then Admin receives the response for "<scenarioName>" for the login API
+   Then Admin Validates response body matches JSON schema in "<scenarioName>" Login API
+    Then Admin validates "<scenarioName>" Login API response headers
+    Then Admin validates "<scenarioName>" Login API response time
+    Then Admin validates "<scenarioName>" Login API response all
+  
 
     Examples:
       |scenarioName|
@@ -43,6 +51,9 @@ Scenario Outline: Validate Negative login API scenarios
     When Admin sends a HTTPS request to the valid endpoint for forgot password API with "<scenarioName>"
     Then Admin validates forgot password response with "<scenarioName>"
     Then Admin Validates response body matches JSON schema in forgot password API
+      Then Admin validates "<scenarioName>" Login API response headers
+    Then Admin validates "<scenarioName>" Login API response time
+   
 
     Examples:
       | scenarioName|
