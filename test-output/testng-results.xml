@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <testng-results ignored="0" total="125" passed="91" failed="34" skipped="0">
   <reporter-output>
   </reporter-output>
   <suite started-at="2026-05-05T13:21:19 EDT" name="Default suite" finished-at="2026-05-05T13:22:08 EDT" duration-ms="48587">
+=======
+<testng-results ignored="0" total="18" passed="3" failed="15" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-05T13:28:02 EDT" name="Default suite" finished-at="2026-05-05T13:28:19 EDT" duration-ms="17057">
+>>>>>>> Stashed changes
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< Updated upstream
     <test started-at="2026-05-05T13:21:19 EDT" name="Default test" finished-at="2026-05-05T13:22:08 EDT" duration-ms="48587">
       <class name="runner.TestRunner">
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:19 EDT" name="setUpClass" finished-at="2026-05-05T13:21:21 EDT" duration-ms="2041" status="PASS">
@@ -15,12 +23,22 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@2f6f7113]]>
+=======
+    <test started-at="2026-05-05T13:28:02 EDT" name="Default test" finished-at="2026-05-05T13:28:19 EDT" duration-ms="17057">
+      <class name="runner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:02 EDT" name="setUpClass" finished-at="2026-05-05T13:28:04 EDT" duration-ms="2156" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1728d307]]>
+>>>>>>> Stashed changes
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< Updated upstream
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:21 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:21:27 EDT" duration-ms="5424" status="PASS">
           <params>
             <param index="0">
@@ -761,56 +779,525 @@ at ✽.Admin validates GET response for "Get All Programs With Users Without Aut
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:21:42 EDT" duration-ms="757" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:11 EDT" duration-ms="6536" status="FAIL">
+>>>>>>> Stashed changes
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin retrieves all batches with valid endpoint"]]>
+                <![CDATA["Admin updates a batch with valid batch ID"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["GET All Batches[Get Operation]"]]>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.lang.Integer.intValue()" because the return value of "utilities.ScenarioContext.get(String, java.lang.Class)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "utilities.ScenarioContext.get(String, java.lang.Class)" is null
+at stepDefinition.BatchStepDefiniton.admin_creates_put_request_with_valid_batch_id(BatchStepDefiniton.java:746)
+at ✽.Admin creates PUT request with valid BatchId(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:11 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:11 EDT" duration-ms="45" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch with invalid batch ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.lang.Integer.intValue()" because the return value of "utilities.ScenarioContext.get(String, java.lang.Class)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "utilities.ScenarioContext.get(String, java.lang.Class)" is null
+at stepDefinition.BatchStepDefiniton.admin_creates_put_request_with_invalid_batch_id(BatchStepDefiniton.java:789)
+at ✽.Admin creates PUT request with invalid BatchId(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:13)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:11 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:11 EDT" duration-ms="334" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch by batch id with missing mandatory fields in request body"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< Updated upstream
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:21:42 EDT" duration-ms="247" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:11 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:12 EDT" duration-ms="368" status="FAIL">
+>>>>>>> Stashed changes
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin retrieves all batches with invalid endpoint"]]>
+                <![CDATA["Admin updates a batch by batch id with invalid batch details"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["GET All Batches[Get Operation]"]]>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
               </value>
             </param>
           </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< Updated upstream
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:21:43 EDT" duration-ms="212" status="FAIL">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:12 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:12 EDT" duration-ms="223" status="FAIL">
+>>>>>>> Stashed changes
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin retrieves all batches with invalid method"]]>
+                <![CDATA["Admin updates a batch by batch id with invalid batch details"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["GET All Batches[Get Operation]"]]>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:12 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:12 EDT" duration-ms="215" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch by batch id with invalid batch details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:12 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:12 EDT" duration-ms="237" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch by batch id with invalid batch details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:12 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:13 EDT" duration-ms="269" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch by batch id with invalid batch details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:13 EDT" duration-ms="217" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch by batch id with invalid batch details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:13 EDT" duration-ms="222" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch by batch id with invalid batch details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:13 EDT" duration-ms="234" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch by batch id with invalid batch details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:14 EDT" duration-ms="258" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch by batch id with invalid batch details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:14 EDT" duration-ms="240" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch by batch id with invalid batch details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Admin receives 400 Bad Request with error message' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Admin receives {int} Bad Request with error message")
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:14 EDT" duration-ms="232" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin updates a batch by batch id with a program name that does not match the associated program id"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [405] but found [400]]]>
+              <![CDATA[expected [200] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [405] but found [400]
+              <![CDATA[java.lang.AssertionError: expected [200] but found [400]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -818,33 +1305,42 @@ at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1431)
 at org.testng.Assert.assertEquals(Assert.java:1395)
 at org.testng.Assert.assertEquals(Assert.java:1441)
+<<<<<<< Updated upstream
 at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
 at ✽.Admin receives 405 method not allowed(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-01GetAllBatches.feature:20)
+=======
+at stepDefinition.BatchStepDefiniton.admin_receives_a_ok_status_and_the_response_body_contains_the_program_details_corresponding_to_the_provided_program_id(BatchStepDefiniton.java:874)
+at ✽.Admin receives a 200 OK status and the response body contains the program details corresponding to the provided program id(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:43)
+>>>>>>> Stashed changes
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< Updated upstream
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:21:43 EDT" duration-ms="235" status="FAIL">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:14 EDT" duration-ms="237" status="FAIL">
+>>>>>>> Stashed changes
           <params>
             <param index="0">
               <value>
-                <![CDATA["Admin retrieves all batches with invalid content type"]]>
+                <![CDATA["Admin updates a batch by batch id with inactive program"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["GET All Batches[Get Operation]"]]>
+                <![CDATA["Update by BatchId [Put Operation]"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [415] but found [403]]]>
+              <![CDATA[expected [400] but found [404]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [415] but found [403]
+              <![CDATA[java.lang.AssertionError: expected [400] but found [404]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -852,14 +1348,20 @@ at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1431)
 at org.testng.Assert.assertEquals(Assert.java:1395)
 at org.testng.Assert.assertEquals(Assert.java:1441)
+<<<<<<< Updated upstream
 at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
 at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-01GetAllBatches.feature:25)
+=======
+at stepDefinition.BatchStepDefiniton.admin_receives_bad_request_with_valid_error_message(BatchStepDefiniton.java:136)
+at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:48)
+>>>>>>> Stashed changes
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< Updated upstream
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:21:43 EDT" duration-ms="266" status="FAIL">
           <params>
             <param index="0">
@@ -2247,6 +2749,9 @@ at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:21:56 EDT" duration-ms="218" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:15 EDT" duration-ms="232" status="PASS">
+>>>>>>> Stashed changes
           <params>
             <param index="0">
               <value>
@@ -2262,7 +2767,11 @@ at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< Updated upstream
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:21:56 EDT" duration-ms="22" status="FAIL">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:15 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:15 EDT" duration-ms="36" status="FAIL">
+>>>>>>> Stashed changes
           <params>
             <param index="0">
               <value>
@@ -2297,14 +2806,22 @@ public void admin_sends_post_https_request_to_the_endpoint_for_invalid_method() 
     throw new io.cucumber.java.PendingException();
 }
 
+<<<<<<< Updated upstream
 at ✽.Admin sends POST HTTPS request to the endpoint for invalid method(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:57)
+=======
+at ✽.Admin sends POST HTTPS request to the endpoint for invalid method(file:///C:/Users/siris/git/Team06_API_Titans_RestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:57)
+>>>>>>> Stashed changes
 ]]>
             </full-stacktrace>
           </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< Updated upstream
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:21:56 EDT" duration-ms="219" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:15 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:28:15 EDT" duration-ms="270" status="PASS">
+>>>>>>> Stashed changes
           <params>
             <param index="0">
               <value>
@@ -2320,6 +2837,7 @@ at ✽.Admin sends POST HTTPS request to the endpoint for invalid method(file://
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< Updated upstream
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:21:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-05T13:21:56 EDT" duration-ms="221" status="FAIL">
           <params>
             <param index="0">
@@ -2779,6 +3297,9 @@ at ✽.Admin sends a HTTPS DELETE request to the valid endpoint in program API(f
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@7fb4f2a9]" started-at="2026-05-05T13:22:01 EDT" name="tearDownClass" finished-at="2026-05-05T13:22:08 EDT" duration-ms="6196" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@2663e964]" started-at="2026-05-05T13:28:15 EDT" name="tearDownClass" finished-at="2026-05-05T13:28:19 EDT" duration-ms="4347" status="PASS">
+>>>>>>> Stashed changes
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -10,7 +10,13 @@ Given Admin creates GET request with valid Batch ID
 When Admin sends HTTPS request to the endpoint for batch with batchId
 Then Admin receives 200 OK Status with response body.                                                                  
 
-@DeleteByBatchId @GetInactiveBatchID
+@DeleteByBatchId
+Scenario: Admin deletes a batch with valid batch id
+Given Admin creates DELETE request with valid BatchId
+When Admin sends HTTPS request to the endpoint for deleting batch with batchId
+Then Admin receives 200 Ok status with message
+
+@GetInactiveBatchID
 Scenario: Admin retrieves a batch with inactive batch ID
 Given Admin creates GET request with inactive Batch ID
 When Admin sends HTTPS request to the endpoint for batch with batchId
