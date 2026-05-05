@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>91/34/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 05 11:00:14 EDT 2026</td>
+<td>Started on:</td><td>Tue May 05 13:21:19 EDT 2026</td>
 </tr>
-<tr><td>Total time:</td><td>48 seconds (48869 ms)</td>
+<tr><td>Total time:</td><td>48 seconds (48587 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,682 +75,6 @@ function toggleAllBoxes() {
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with both mandatory and optional fields", "Add New Batch [Post Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [201] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_created_status_with_response_body(BatchStepDefiniton.java:91)
-	at ✽.Admin receives 201 Created status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:11)
-</pre></div><a href='#' onClick='toggleBox("stack-trace435759226", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace435759226'><pre>java.lang.AssertionError: expected [201] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_created_status_with_response_body(BatchStepDefiniton.java:91)
-	at ✽.Admin receives 201 Created status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:11)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch with valid batch ID", "GET Batch by BatchId[Get Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
-	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-03-GetBtachByBatchId.feature:11)
-</pre></div><a href='#' onClick='toggleBox("stack-trace43426640", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace43426640'><pre>java.lang.AssertionError: expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
-	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-03-GetBtachByBatchId.feature:11)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates a batch with without authorization.", "Add New Batch with NoAuth [Post Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [401] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_unauthorized(BatchStepDefiniton.java:440)
-	at ✽.Admin receives 401 Unauthorized(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/BatchWithNoAuth.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace434459299", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace434459299'><pre>java.lang.AssertionError: expected [401] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_unauthorized(BatchStepDefiniton.java:440)
-	at ✽.Admin receives 401 Unauthorized(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/BatchWithNoAuth.feature:10)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace47827984", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace47827984'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with inactive program", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_bad_request_with_valid_error_message(BatchStepDefiniton.java:136)
-	at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:48)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2099828005", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2099828005'><pre>java.lang.AssertionError: expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_bad_request_with_valid_error_message(BatchStepDefiniton.java:136)
-	at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:48)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid method", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin sends POST HTTPS request to the endpoint for invalid method&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@When(&quot;Admin sends POST HTTPS request to the endpoint for invalid method&quot;)
-public void admin_sends_post_https_request_to_the_endpoint_for_invalid_method() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin sends POST HTTPS request to the endpoint for invalid method(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:57)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1982987070", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1982987070'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin sends POST HTTPS request to the endpoint for invalid method&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@When(&quot;Admin sends POST HTTPS request to the endpoint for invalid method&quot;)
-public void admin_sends_post_https_request_to_the_endpoint_for_invalid_method() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin sends POST HTTPS request to the endpoint for invalid method(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:57)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with invalid method", "GET All Batches[Get Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [405] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
-	at ✽.Admin receives 405 method not allowed(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-01GetAllBatches.feature:20)
-</pre></div><a href='#' onClick='toggleBox("stack-trace169600459", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace169600459'><pre>java.lang.AssertionError: expected [405] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
-	at ✽.Admin receives 405 method not allowed(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-01GetAllBatches.feature:20)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Get all Program without Auth"</td>
-<td><div><pre>java.lang.AssertionError: expected [401] but found [200]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1461)
-	at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
-	at ✽.Admin validates GET response for &quot;Get All Programs With Users Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
-</pre></div><a href='#' onClick='toggleBox("stack-trace157926137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace157926137'><pre>java.lang.AssertionError: expected [401] but found [200]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1461)
-	at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
-	at ✽.Admin validates GET response for &quot;Get All Programs With Users Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin deletes a batch by batch id with invalid content type", "Delete Batch by BatchId [Delete Operation]"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;io.restassured.response.Response.asPrettyString()&quot; because &quot;this.response&quot; is null
-	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:352)
-	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-07-DeleteBatchByBatchId.feature:35)
-</pre></div><a href='#' onClick='toggleBox("stack-trace995953741", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace995953741'><pre>java.lang.NullPointerException: Cannot invoke &quot;io.restassured.response.Response.asPrettyString()&quot; because &quot;this.response&quot; is null
-	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:352)
-	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-07-DeleteBatchByBatchId.feature:35)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1189861498", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1189861498'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
-<td><div><pre>java.lang.AssertionError: API response time is greater than 3000 expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at stepDefinition.loginStepDefinition.admin_validates_login_api_response_time(loginStepDefinition.java:222)
-	at ✽.Admin validates &quot;Valid Email in forgot password API&quot; Login API response time(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/01-login.feature:55)
-</pre></div><a href='#' onClick='toggleBox("stack-trace448700909", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace448700909'><pre>java.lang.AssertionError: API response time is greater than 3000 expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at stepDefinition.loginStepDefinition.admin_validates_login_api_response_time(loginStepDefinition.java:222)
-	at ✽.Admin validates &quot;Valid Email in forgot password API&quot; Login API response time(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/01-login.feature:55)
-</pre></div></td>
-<td>8</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace595650772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace595650772'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1554519420", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1554519420'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch with inactive batch ID", "GET Batch by BatchId[Get Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
-	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-03-GetBtachByBatchId.feature:17)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1465333888", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1465333888'><pre>java.lang.AssertionError: expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
-	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-03-GetBtachByBatchId.feature:17)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin deletes a batch with valid batch id", "Delete Batch by BatchId [Delete Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_message(BatchStepDefiniton.java:986)
-	at ✽.Admin receives 200 Ok status with message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-07-DeleteBatchByBatchId.feature:11)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1322292940", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1322292940'><pre>java.lang.AssertionError: expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_message(BatchStepDefiniton.java:986)
-	at ✽.Admin receives 200 Ok status with message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-07-DeleteBatchByBatchId.feature:11)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with invalid content type", "GET All Batches[Get Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [415] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
-	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-01GetAllBatches.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2139268895", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2139268895'><pre>java.lang.AssertionError: expected [415] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
-	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-01GetAllBatches.feature:25)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1782795485", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1782795485'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with a program name that does not match the associated program id", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_a_ok_status_and_the_response_body_contains_the_program_details_corresponding_to_the_provided_program_id(BatchStepDefiniton.java:874)
-	at ✽.Admin receives a 200 OK status and the response body contains the program details corresponding to the provided program id(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:43)
-</pre></div><a href='#' onClick='toggleBox("stack-trace190094410", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace190094410'><pre>java.lang.AssertionError: expected [200] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_a_ok_status_and_the_response_body_contains_the_program_details_corresponding_to_the_provided_program_id(BatchStepDefiniton.java:874)
-	at ✽.Admin receives a 200 OK status and the response body contains the program details corresponding to the provided program id(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:43)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace373853911", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace373853911'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid method", "Add New Batch [Post Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [405] but found [200]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
-	at ✽.Admin receives 405 method not allowed(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:100)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1751171072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1751171072'><pre>java.lang.AssertionError: expected [405] but found [200]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
-	at ✽.Admin receives 405 method not allowed(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:100)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch with valid batch ID", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_updated_value_in_response_body(BatchStepDefiniton.java:774)
-	at ✽.Admin receives 200 OK Status with updated value in response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1986174850", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1986174850'><pre>java.lang.AssertionError: expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_updated_value_in_response_body(BatchStepDefiniton.java:774)
-	at ✽.Admin receives 200 OK Status with updated value in response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:10)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2141109502", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2141109502'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with inactive program ID", "Add New Batch [Post Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_bad_request_with_valid_error_message(BatchStepDefiniton.java:136)
-	at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:80)
-</pre></div><a href='#' onClick='toggleBox("stack-trace976475733", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace976475733'><pre>java.lang.AssertionError: expected [400] but found [404]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_bad_request_with_valid_error_message(BatchStepDefiniton.java:136)
-	at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:80)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch name with invalid content type", "GET Batch by BatchName[Get Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [415] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
-	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-04-GetBatchByBatchName.feature:30)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1502090276", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1502090276'><pre>java.lang.AssertionError: expected [415] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
-	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-04-GetBatchByBatchName.feature:30)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with only mandatory fields", "Add New Batch [Post Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [201] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_created_status_with_response_body(BatchStepDefiniton.java:91)
-	at ✽.Admin receives 201 Created status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:29)
-</pre></div><a href='#' onClick='toggleBox("stack-trace774515463", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace774515463'><pre>java.lang.AssertionError: expected [201] but found [400]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1395)
-	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_created_status_with_response_body(BatchStepDefiniton.java:91)
-	at ✽.Admin receives 201 Created status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:29)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2132115899", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2132115899'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Get all Program without Auth"</td>
-<td><div><pre>java.lang.AssertionError: expected [401] but found [200]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1461)
-	at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
-	at ✽.Admin validates GET response for &quot;Get All Programs Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
-</pre></div><a href='#' onClick='toggleBox("stack-trace910091281", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace910091281'><pre>java.lang.AssertionError: expected [401] but found [200]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1431)
-	at org.testng.Assert.assertEquals(Assert.java:1461)
-	at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
-	at ✽.Admin validates GET response for &quot;Get All Programs Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
-</pre></div></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch id with invalid content type", "GET Batch by BatchId[Get Operation]"</td>
 <td><div><pre>java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: batchId.
@@ -843,8 +167,8 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
 	at stepDefinition.BatchStepDefiniton.admin_sends_https_request_to_the_endpoint_for_invalid_content_method(BatchStepDefiniton.java:648)
 	at ✽.Admin sends HTTPS request to the endpoint for invalid content method(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-03-GetBtachByBatchId.feature:40)
-</pre></div><a href='#' onClick='toggleBox("stack-trace36342235", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace36342235'><pre>java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: batchId.
+</pre></div><a href='#' onClick='toggleBox("stack-trace372017580", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace372017580'><pre>java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: batchId.
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -943,8 +267,8 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 	at utilities.JsonReader.getTestDataByScenarioName(JsonReader.java:32)
 	at stepDefinition.BatchStepDefiniton.admin_creates_post_request_with_invalid_content_type(BatchStepDefiniton.java:330)
 	at ✽.Admin creates POST request with invalid content type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:93)
-</pre></div><a href='#' onClick='toggleBox("stack-trace146437128", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace146437128'><pre>java.lang.RuntimeException: Scenario not found: Admin creates batch with invalid content type
+</pre></div><a href='#' onClick='toggleBox("stack-trace904281382", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace904281382'><pre>java.lang.RuntimeException: Scenario not found: Admin creates batch with invalid content type
 	at utilities.JsonReader.getTestDataByScenarioName(JsonReader.java:32)
 	at stepDefinition.BatchStepDefiniton.admin_creates_post_request_with_invalid_content_type(BatchStepDefiniton.java:330)
 	at ✽.Admin creates POST request with invalid content type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:93)
@@ -952,8 +276,60 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch with valid batch name", "GET Batch by BatchName[Get Operation]"</td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1575050465", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1575050465'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace666871167", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace666871167'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid method", "Add New Batch [Post Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [405] but found [200]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -961,10 +337,10 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 	at org.testng.Assert.assertEquals(Assert.java:1431)
 	at org.testng.Assert.assertEquals(Assert.java:1395)
 	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
-	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-04-GetBatchByBatchName.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace919488700", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace919488700'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
+	at ✽.Admin receives 405 method not allowed(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:100)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1616653215", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1616653215'><pre>java.lang.AssertionError: expected [405] but found [200]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -972,8 +348,8 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 	at org.testng.Assert.assertEquals(Assert.java:1431)
 	at org.testng.Assert.assertEquals(Assert.java:1395)
 	at org.testng.Assert.assertEquals(Assert.java:1441)
-	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
-	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-04-GetBatchByBatchName.feature:10)
+	at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
+	at ✽.Admin receives 405 method not allowed(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:100)
 </pre></div></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
@@ -987,9 +363,9 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 	at org.testng.Assert.assertEquals(Assert.java:1431)
 	at org.testng.Assert.assertEquals(Assert.java:1461)
 	at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
-	at ✽.Admin validates GET response for &quot;Get Program By ID Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
-</pre></div><a href='#' onClick='toggleBox("stack-trace406952631", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace406952631'><pre>java.lang.AssertionError: expected [401] but found [200]
+	at ✽.Admin validates GET response for &quot;Get All Programs Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1477200907", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1477200907'><pre>java.lang.AssertionError: expected [401] but found [200]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -997,59 +373,45 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 	at org.testng.Assert.assertEquals(Assert.java:1431)
 	at org.testng.Assert.assertEquals(Assert.java:1461)
 	at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
-	at ✽.Admin validates GET response for &quot;Get Program By ID Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
+	at ✽.Admin validates GET response for &quot;Get All Programs Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
 </pre></div></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace352936958", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace352936958'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID", "Delete Program API"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;io.restassured.specification.RequestSpecification.when()&quot; because &quot;this.request&quot; is null
+	at stepDefinition.ProgramStepDefinition.admin_sends_a_https_delete_request_to_the_valid_endpoint_in_program_api(ProgramStepDefinition.java:291)
+	at ✽.Admin sends a HTTPS DELETE request to the valid endpoint in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/DeleteProgram.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace856633414", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace856633414'><pre>java.lang.NullPointerException: Cannot invoke &quot;io.restassured.specification.RequestSpecification.when()&quot; because &quot;this.request&quot; is null
+	at stepDefinition.ProgramStepDefinition.admin_sends_a_https_delete_request_to_the_valid_endpoint_in_program_api(ProgramStepDefinition.java:291)
+	at ✽.Admin sends a HTTPS DELETE request to the valid endpoint in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/DeleteProgram.feature:8)
 </pre></div></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
-</pre></div><a href='#' onClick='toggleBox("stack-trace595320134", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace595320134'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
-public void admin_receives_bad_request_with_error_message(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch with valid batch ID", "GET Batch by BatchId[Get Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
+	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-03-GetBtachByBatchId.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace596108811", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace596108811'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
+	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-03-GetBtachByBatchId.feature:11)
 </pre></div></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
@@ -1065,8 +427,8 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 	at org.testng.Assert.assertEquals(Assert.java:1441)
 	at stepDefinition.BatchStepDefiniton.admin_receives_a_created_and_the_response_body_contains_the_program_details_corresponding_to_the_provided_program_id(BatchStepDefiniton.java:113)
 	at ✽.Admin receives a 201 created and the response body contains the program details corresponding to the provided program id(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:17)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1653316341", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1653316341'><pre>java.lang.AssertionError: expected [201] but found [400]
+</pre></div><a href='#' onClick='toggleBox("stack-trace306013803", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace306013803'><pre>java.lang.AssertionError: expected [201] but found [400]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -1076,6 +438,638 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 	at org.testng.Assert.assertEquals(Assert.java:1441)
 	at stepDefinition.BatchStepDefiniton.admin_receives_a_created_and_the_response_body_contains_the_program_details_corresponding_to_the_provided_program_id(BatchStepDefiniton.java:113)
 	at ✽.Admin receives a 201 created and the response body contains the program details corresponding to the provided program id(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:17)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with inactive program ID", "Add New Batch [Post Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_bad_request_with_valid_error_message(BatchStepDefiniton.java:136)
+	at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:80)
+</pre></div><a href='#' onClick='toggleBox("stack-trace347403362", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace347403362'><pre>java.lang.AssertionError: expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_bad_request_with_valid_error_message(BatchStepDefiniton.java:136)
+	at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:80)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with both mandatory and optional fields", "Add New Batch [Post Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_created_status_with_response_body(BatchStepDefiniton.java:91)
+	at ✽.Admin receives 201 Created status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1998990961", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1998990961'><pre>java.lang.AssertionError: expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_created_status_with_response_body(BatchStepDefiniton.java:91)
+	at ✽.Admin receives 201 Created status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:11)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace431457579", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace431457579'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with invalid content type", "GET All Batches[Get Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [415] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
+	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-01GetAllBatches.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1765232168", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1765232168'><pre>java.lang.AssertionError: expected [415] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
+	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-01GetAllBatches.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1230810243", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1230810243'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1664297171", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1664297171'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1844974364", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1844974364'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch name with invalid content type", "GET Batch by BatchName[Get Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [415] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
+	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-04-GetBatchByBatchName.feature:30)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2055199770", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2055199770'><pre>java.lang.AssertionError: expected [415] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:353)
+	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-04-GetBatchByBatchName.feature:30)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1896395053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1896395053'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with a program name that does not match the associated program id", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_a_ok_status_and_the_response_body_contains_the_program_details_corresponding_to_the_provided_program_id(BatchStepDefiniton.java:874)
+	at ✽.Admin receives a 200 OK status and the response body contains the program details corresponding to the provided program id(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:43)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1985793146", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1985793146'><pre>java.lang.AssertionError: expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_a_ok_status_and_the_response_body_contains_the_program_details_corresponding_to_the_provided_program_id(BatchStepDefiniton.java:874)
+	at ✽.Admin receives a 200 OK status and the response body contains the program details corresponding to the provided program id(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:43)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Get all Program without Auth"</td>
+<td><div><pre>java.lang.AssertionError: expected [401] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1461)
+	at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
+	at ✽.Admin validates GET response for &quot;Get Program By ID Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1648003357", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1648003357'><pre>java.lang.AssertionError: expected [401] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1461)
+	at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
+	at ✽.Admin validates GET response for &quot;Get Program By ID Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch with inactive batch ID", "GET Batch by BatchId[Get Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
+	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-03-GetBtachByBatchId.feature:17)
+</pre></div><a href='#' onClick='toggleBox("stack-trace348244902", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace348244902'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
+	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-03-GetBtachByBatchId.feature:17)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Get all Program without Auth"</td>
+<td><div><pre>java.lang.AssertionError: expected [401] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1461)
+	at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
+	at ✽.Admin validates GET response for &quot;Get All Programs With Users Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1242547813", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1242547813'><pre>java.lang.AssertionError: expected [401] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1461)
+	at stepDefinition.ProgramStepDefinition.admin_validates_get_response_for_in_program_api(ProgramStepDefinition.java:430)
+	at ✽.Admin validates GET response for &quot;Get All Programs With Users Without Auth&quot; in program API(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/02programwithoutAuth.feature:9)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1769472147", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1769472147'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace897056155", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace897056155'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates a batch with without authorization.", "Add New Batch with NoAuth [Post Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [401] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_unauthorized(BatchStepDefiniton.java:440)
+	at ✽.Admin receives 401 Unauthorized(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/BatchWithNoAuth.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1362474073", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1362474073'><pre>java.lang.AssertionError: expected [401] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_unauthorized(BatchStepDefiniton.java:440)
+	at ✽.Admin receives 401 Unauthorized(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/BatchWithNoAuth.feature:10)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with only mandatory fields", "Add New Batch [Post Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_created_status_with_response_body(BatchStepDefiniton.java:91)
+	at ✽.Admin receives 201 Created status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:29)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1901405112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1901405112'><pre>java.lang.AssertionError: expected [201] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_created_status_with_response_body(BatchStepDefiniton.java:91)
+	at ✽.Admin receives 201 Created status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-02-AddNewBatch.feature:29)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid batch details", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1494271614", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1494271614'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin receives 400 Bad Request with error message&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Admin receives {int} Bad Request with error message&quot;)
+public void admin_receives_bad_request_with_error_message(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin receives 400 Bad Request with error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with invalid method", "GET All Batches[Get Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [405] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
+	at ✽.Admin receives 405 method not allowed(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-01GetAllBatches.feature:20)
+</pre></div><a href='#' onClick='toggleBox("stack-trace910091281", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace910091281'><pre>java.lang.AssertionError: expected [405] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_method_not_allowed(BatchStepDefiniton.java:387)
+	at ✽.Admin receives 405 method not allowed(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-01GetAllBatches.feature:20)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin deletes a batch with valid batch id", "Delete Batch by BatchId [Delete Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_message(BatchStepDefiniton.java:986)
+	at ✽.Admin receives 200 Ok status with message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-07-DeleteBatchByBatchId.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1620744559", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1620744559'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_message(BatchStepDefiniton.java:986)
+	at ✽.Admin receives 200 Ok status with message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-07-DeleteBatchByBatchId.feature:11)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin deletes a batch by batch id with invalid content type", "Delete Batch by BatchId [Delete Operation]"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;io.restassured.response.Response.asPrettyString()&quot; because &quot;this.response&quot; is null
+	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:352)
+	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-07-DeleteBatchByBatchId.feature:35)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1662433763", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1662433763'><pre>java.lang.NullPointerException: Cannot invoke &quot;io.restassured.response.Response.asPrettyString()&quot; because &quot;this.response&quot; is null
+	at stepDefinition.BatchStepDefiniton.admin_receives_unsupported_media_type(BatchStepDefiniton.java:352)
+	at ✽.Admin receives 415 unsupported media type(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-07-DeleteBatchByBatchId.feature:35)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch with valid batch name", "GET Batch by BatchName[Get Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
+	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-04-GetBatchByBatchName.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace45448642", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace45448642'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_response_body(BatchStepDefiniton.java:474)
+	at ✽.Admin receives 200 OK Status with response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-04-GetBatchByBatchName.feature:10)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid method", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin sends POST HTTPS request to the endpoint for invalid method&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@When(&quot;Admin sends POST HTTPS request to the endpoint for invalid method&quot;)
+public void admin_sends_post_https_request_to_the_endpoint_for_invalid_method() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin sends POST HTTPS request to the endpoint for invalid method(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:57)
+</pre></div><a href='#' onClick='toggleBox("stack-trace349549228", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace349549228'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin sends POST HTTPS request to the endpoint for invalid method&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@When(&quot;Admin sends POST HTTPS request to the endpoint for invalid method&quot;)
+public void admin_sends_post_https_request_to_the_endpoint_for_invalid_method() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Admin sends POST HTTPS request to the endpoint for invalid method(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:57)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch with valid batch ID", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_updated_value_in_response_body(BatchStepDefiniton.java:774)
+	at ✽.Admin receives 200 OK Status with updated value in response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1656169097", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1656169097'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_ok_status_with_updated_value_in_response_body(BatchStepDefiniton.java:774)
+	at ✽.Admin receives 200 OK Status with updated value in response body.(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:10)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with inactive program", "Update by BatchId [Put Operation]"</td>
+<td><div><pre>java.lang.AssertionError: expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_bad_request_with_valid_error_message(BatchStepDefiniton.java:136)
+	at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:48)
+</pre></div><a href='#' onClick='toggleBox("stack-trace913577547", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace913577547'><pre>java.lang.AssertionError: expected [400] but found [404]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1431)
+	at org.testng.Assert.assertEquals(Assert.java:1395)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at stepDefinition.BatchStepDefiniton.admin_receives_bad_request_with_valid_error_message(BatchStepDefiniton.java:136)
+	at ✽.Admin receives 400 Bad Request with valid error message(file:///C:/Users/Happy%20Family/eclipse-workspace/Team06_APITitanRestAssured/src/test/resources/feature/03-06-UpdateByBatchId.feature:48)
 </pre></div></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
@@ -1089,12 +1083,147 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch name formats", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid status field", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid number of classes", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all programs with valid endpoint", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch id with invalid endpoint", "GET Batch by BatchId[Get Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch name formats", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch name formats", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch with invalid batch ID", "Update by BatchId [Put Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with valid endpoint", "GET All Batches[Get Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin deletes a batch with invalid batch id", "Delete Batch by BatchId [Delete Operation]"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
@@ -1109,87 +1238,7 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid number of classes", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with valid endpoint", "GET All Batches[Get Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with invalid endpoint", "GET All Batches[Get Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin generates token with valid credential for the login API", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>3</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch name formats", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid number of classes", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch with invalid batch ID", "Update by BatchId [Put Operation]"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Delete Program API"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
@@ -1199,22 +1248,27 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid number of classes", "Add New Batch [Post Operation]"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with missing mandatory fields in request body", "Update by BatchId [Put Operation]"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin deletes a batch by batch id with invalid endpoint", "Delete Batch by BatchId [Delete Operation]"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
@@ -1229,217 +1283,7 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin deletes a batch with invalid batch id", "Delete Batch by BatchId [Delete Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch name formats", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch name formats", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates a program with valid request body and authorization", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with program that is not exist in the system", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid content type", "Update by BatchId [Put Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch id with invalid endpoint", "GET Batch by BatchId[Get Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch name formats", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch name with invalid method", "GET Batch by BatchName[Get Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all programs with valid endpoint", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>1</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch description", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid status field", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with only optional fields", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin deletes a batch by batch id with invalid method", "Delete Batch by BatchId [Delete Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch description", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid status field", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch name formats", "Add New Batch [Post Operation]"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
@@ -1459,37 +1303,7 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch with invalid batch name", "GET Batch by BatchName[Get Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with missing mandatory fields in request body", "Update by BatchId [Put Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin generates token with valid credential for the reset API", "Reset Password API"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid status field", "Add New Batch [Post Operation]"</td>
-<td></td>
-<td>0</td>
-<td>runner.TestRunner@7fb4f2a9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves all batches with invalid endpoint", "GET All Batches[Get Operation]"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
@@ -1499,27 +1313,102 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch with invalid batch name", "GET Batch by BatchName[Get Operation]"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch id with invalid method", "GET Batch by BatchId[Get Operation]"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Logout API scenarios", "Logout API"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch name with invalid endpoint", "GET Batch by BatchName[Get Operation]"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with only optional fields", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates a program with valid request body and authorization", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin generates token with valid credential for the login API", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>5</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID API scenarios", "Delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin updates a batch by batch id with invalid content type", "Update by BatchId [Put Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid status field", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch description", "Add New Batch [Post Operation]"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
@@ -1534,12 +1423,117 @@ public void admin_receives_bad_request_with_error_message(Integer int1) {
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid number of classes", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch name formats", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch description", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin deletes a batch by batch id with invalid method", "Delete Batch by BatchId [Delete Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin generates token with valid credential for the reset API", "Reset Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid status field", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset Password API scenarios", "Reset Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin deletes a batch by batch id with invalid endpoint", "Delete Batch by BatchId [Delete Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid batch name formats", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Delete Program By ProgramID", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with invalid number of classes", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin creates batch with program that is not exist in the system", "Add New Batch [Post Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch name with invalid endpoint", "GET Batch by BatchName[Get Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Forgot Password Confirm email LoginAPI scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch name with invalid method", "GET Batch by BatchName[Get Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Negative login API scenarios", "User Sign In and forgot Password API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin retrieves a batch by batch id with invalid method", "GET Batch by BatchId[Get Operation]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Program GET API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@7fb4f2a9</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Update Program API scenarios", "Program Module API - Get API Create API Update API and delete Program API"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@7fb4f2a9</td></tr>
