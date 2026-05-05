@@ -1,10 +1,11 @@
-@authToken
+@Addnewbatch 
 Feature: Add New Batch [Post Operation]
 
 Background:  
 Given Admin sets Authorization to Bearer Token for batch
 
-@postprogram @PostBatch-01
+
+@PostBatch-01
 Scenario: Admin creates batch with both mandatory and optional fields
 Given Admin creates POST request with mandatory and optional fields
 When Admin sends HTTPS request to the endpoint 

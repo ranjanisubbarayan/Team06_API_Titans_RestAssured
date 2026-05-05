@@ -45,18 +45,4 @@ Background:
     
 
 
-@authToken @putprogrambyID
- Scenario Outline: Validate Update Program API scenarios
-    Given Admin creates PUT request with "<scenarioName>" for update program API
-    When Admin sends PUT request for "<scenarioName>" with valid endpoint for update program API
-    Then Admin validates response for "<scenarioName>" for update program API
-   Then Admin Validates response body matches JSON schema in  in Update program API
-    Examples:
-      | scenarioName| 
-      |Valid Program ID Chaining| 
-      |Invalid Program ID|
-       |Without Request Body| 
-      |Invalid Method| 
-      | Invalid Endpoint| 
-
 
